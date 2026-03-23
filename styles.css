@@ -97,6 +97,26 @@ body.hero-hover #three-canvas {
   box-shadow: 0 0 16px var(--accent-glow);
 }
 
+/* Botón selector de idioma */
+.lang-btn {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s;
+  margin-left: 6px;
+}
+.lang-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
 /* ========================================
    HERO
    ======================================== */
