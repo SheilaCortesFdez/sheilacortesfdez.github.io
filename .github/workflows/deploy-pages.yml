@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Si tu sitio necesita build, añade aquí los pasos de build antes del upload.
+      # Si necesitas un build (npm, hugo, etc.), añade aquí los pasos de build antes del upload.
       # Ejemplo Node:
       # - name: Setup Node
       #   uses: actions/setup-node@v4
@@ -28,7 +28,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: .    # cambia a ./build si tu sitio se genera ahí
+          path: .    # publica la raíz; cambia a ./build si tu sitio se genera ahí
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
