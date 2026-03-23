@@ -5,19 +5,22 @@ on:
     branches:
       - master
 
+# Permisos recomendados
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Si necesitas ejecutar un build (npm, hugo, etc.), añádelo aquí.
+      # Si necesitas un build (npm, hugo, etc.) añádelo aquí.
       # Ejemplo para Node:
-      # - name: Install & build
+      # - name: Setup Node
       #   uses: actions/setup-node@v4
       #   with:
       #     node-version: '18'
@@ -30,4 +33,7 @@ jobs:
 
   deploy:
     needs: build
-    uses: actions/deploy-pages@v1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
