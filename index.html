@@ -16,44 +16,40 @@
 
 <!-- ===== NAVEGACIÓN ===== -->
 <nav id="main-nav">
-  <a href="#hero"       class="nav-link active" data-i18n="nav.home">Inicio</a>
-  <a href="#about"      class="nav-link" data-i18n="nav.about">Sobre mí</a>
-  <a href="#skills"     class="nav-link" data-i18n="nav.skills">Habilidades</a>
-  <a href="#experience" class="nav-link" data-i18n="nav.experience">Experiencia</a>
-  <a href="#education"  class="nav-link" data-i18n="nav.education">Formación</a>
-  <a href="#projects"   class="nav-link" data-i18n="nav.projects">Proyectos</a>
-  <a href="#contact"    class="nav-link" data-i18n="nav.contact">Contacto</a>
-  <!-- Selector de idioma -->
-  <button id="lang-toggle" class="lang-btn" onclick="toggleLang()" aria-label="Switch language">
-    <span id="lang-label">EN</span>
-  </button>
+  <a href="#hero" class="nav-link active">Inicio</a>
+  <a href="#about"      class="nav-link">Sobre mí</a>
+  <a href="#skills"     class="nav-link">Habilidades</a>
+  <a href="#experience" class="nav-link">Experiencia</a>
+  <a href="#education"  class="nav-link">Formación</a>
+  <a href="#projects"   class="nav-link">Proyectos</a>
+  <a href="#contact"    class="nav-link">Contacto</a>
 </nav>
 
 <!-- ===== HERO ===== -->
 <section id="hero">
-  <div class="badge" data-i18n="hero.badge">✦ Disponible para nuevas oportunidades</div>
+  <div class="badge">✦ Disponible para nuevas oportunidades</div>
   <h1>Sheila Cortés<br><span class="gradient-text">Fernández</span></h1>
-  <p class="subtitle" data-i18n="hero.subtitle">Desarrolladora de Software · Java Backend · Spring Boot</p>
-  <p class="hint" data-i18n="hero.hint">Mueve el ratón sobre la escena 3D <span class="bounce">↓</span></p>
-  <button class="scroll-btn" onclick="scrollToSection('about')" data-i18n="hero.cta">Ver mi perfil</button>
+  <p class="subtitle">Desarrolladora de Software · Java Backend · Spring Boot</p>
+  <p class="hint">Mueve el ratón sobre la escena 3D <span class="bounce">↓</span></p>
+  <button class="scroll-btn" onclick="scrollToSection('about')">Ver mi perfil</button>
 </section>
 
 <!-- ===== SOBRE MÍ ===== -->
 <section id="about" class="content-section">
-  <h2 class="section-title" data-i18n="about.title">👩‍💻 Sobre mí</h2>
+  <h2 class="section-title">👩‍💻 Sobre mí</h2>
 
   <div class="card reveal about-main-card">
-    <p data-i18n="about.p1">Soy <strong>Sheila Cortés Fernández</strong>, desarrolladora de software con sólidos conocimientos en <strong>Java y Spring Boot</strong>. Me apasiona crear soluciones robustas, limpias y bien estructuradas.</p>
-    <p data-i18n="about.p2">He trabajado con arquitecturas por capas y hexagonal, integración de bases de datos relacionales y NoSQL, testing automatizado y entornos de producción monitorizados con herramientas como Dynatrace y OpenShift.</p>
-    <p data-i18n="about.p3">Busco seguir creciendo en equipos donde la calidad del código, las buenas prácticas y el trabajo en equipo sean valores fundamentales.</p>
+    <p>Soy <strong>Sheila Cortés Fernández</strong>, desarrolladora de software con sólidos conocimientos en <strong>Java y Spring Boot</strong>. Me apasiona crear soluciones robustas, limpias y bien estructuradas.</p>
+    <p>He trabajado con arquitecturas por capas y hexagonal, integración de bases de datos relacionales y NoSQL, testing automatizado y entornos de producción monitorizados con herramientas como Dynatrace y OpenShift.</p>
+    <p>Busco seguir creciendo en equipos donde la calidad del código, las buenas prácticas y el trabajo en equipo sean valores fundamentales.</p>
   </div>
 
   <div class="two-col" style="margin-top:1.2rem;">
     <div class="card reveal">
-      <div class="info-item"><span class="icon">📍</span> <span data-i18n="about.location">España</span></div>
-      <div class="info-item"><span class="icon">💼</span> <span data-i18n="about.role">Backend Developer</span></div>
-      <div class="info-item"><span class="icon">🎓</span> CFGS DAW/CFGS DAM</div>
-      <div class="info-item"><span class="icon">🗣️</span> <span data-i18n="about.languages">Español (nativo) · Inglés (B1)</span></div>
+      <div class="info-item"><span class="icon">📍</span> España</div>
+      <div class="info-item"><span class="icon">💼</span> Backend Developer</div>
+      <div class="info-item"><span class="icon">🎓</span> CFGS DAW/CFGS DAM </div>
+      <div class="info-item"><span class="icon">🗣️</span> Español (nativo) · Inglés (B1)</div>
     </div>
     <div class="card reveal">
       <div class="info-item"><span class="icon">🐙</span>
@@ -68,7 +64,7 @@
 
 <!-- ===== HABILIDADES ===== -->
 <section id="skills" class="content-section">
-  <h2 class="section-title" data-i18n="skills.title">🛠️ Habilidades técnicas</h2>
+  <h2 class="section-title">🛠️ Habilidades técnicas</h2>
   <div class="skills-grid">
 
     <div class="card skill-card reveal">
@@ -79,14 +75,14 @@
     </div>
 
     <div class="card skill-card reveal">
-      <h4>🗄️ <span data-i18n="skills.db">Bases de datos</span></h4>
+      <h4>🗄️ Bases de datos</h4>
       <div class="skill-item"><span>MongoDB</span><div class="skill-bar"><div class="skill-fill" data-pct="70"></div></div><span>70%</span></div>
       <div class="skill-item"><span>Oracle / PL-SQL</span><div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div><span>80%</span></div>
       <div class="skill-item"><span>MySQL</span><div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div><span>90%</span></div>
     </div>
 
     <div class="card skill-card reveal">
-      <h4>🧪 <span data-i18n="skills.testing">Testing & Calidad</span></h4>
+      <h4>🧪 Testing & Calidad</h4>
       <div class="skill-item"><span>JUnit 5 / Mockito</span><div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div><span>90%</span></div>
       <div class="skill-item"><span>Newman</span><div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div><span>90%</span></div>
       <div class="skill-item"><span>JMeter</span><div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div><span>85%</span></div>
@@ -107,8 +103,8 @@
     </div>
 
     <div class="card skill-card reveal">
-      <h4>🏗️ <span data-i18n="skills.arch">Arquitectura & Patrones</span></h4>
-      <div class="skill-item"><span data-i18n="skills.mvc">MVC / Por capas</span><div class="skill-bar"><div class="skill-fill" data-pct="95"></div></div><span>95%</span></div>
+      <h4>🏗️ Arquitectura & Patrones</h4>
+      <div class="skill-item"><span>MVC / Por capas</span><div class="skill-bar"><div class="skill-fill" data-pct="95"></div></div><span>95%</span></div>
       <div class="skill-item"><span>Hexagonal / DDD</span><div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div><span>85%</span></div>
       <div class="skill-item"><span>Clean Code / SOLID</span><div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div><span>80%</span></div>
     </div>
@@ -118,16 +114,16 @@
 
 <!-- ===== EXPERIENCIA ===== -->
 <section id="experience" class="content-section">
-  <h2 class="section-title" data-i18n="exp.title">💼 Experiencia</h2>
+  <h2 class="section-title">💼 Experiencia</h2>
   <div class="timeline">
 
     <div class="timeline-item reveal">
       <div class="tl-dot"></div>
-      <div class="date" data-i18n="exp.job1.date">2023 – Actualidad</div>
+      <div class="date">2023 – Actualidad</div>
       <h2>Plexus Tech</h2>
-      <h3 data-i18n="exp.job1.role">Consultora Backend Java</h3>
-      <div class="company" data-i18n="exp.job1.company">Sector bancario / financiero · España</div>
-      <p data-i18n="exp.job1.desc">Desarrollo y mantenimiento de microservicios en Java con Spring Boot bajo arquitectura hexagonal. Integración con bases de datos Oracle. Implementación de pipelines CI/CD con Jenkins y GitHub Actions. Monitorización con OpenShift y Dynatrace.</p>
+      <h3>Consultora Backend Java</h3>
+      <div class="company">Sector bancario / financiero · España</div>
+      <p>Desarrollo y mantenimiento de microservicios en Java con Spring Boot bajo arquitectura hexagonal. Integración con bases de datos Oracle. Implementación de pipelines CI/CD con Jenkins y GitHub Actions. Monitorización con OpenShift y Dynatrace.</p>
       <div class="tags">
         <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">MongoDB</span>
         <span class="tag">Oracle</span><span class="tag">Jenkins</span><span class="tag">OpenShift</span>
@@ -138,9 +134,9 @@
       <div class="tl-dot"></div>
       <div class="date">2018 – 2023</div>
       <h2>Experis España</h2>
-      <h3 data-i18n="exp.job2.role">Desarrolladora Full Stack Java</h3>
-      <div class="company" data-i18n="exp.job2.company">Sector bancario / financiero · España</div>
-      <p data-i18n="exp.job2.desc">Desarrollo y mantenimiento de microservicios en Java con Spring Boot bajo arquitectura por capas. Integración con bases de datos MySQL y desarrollo de servicios SOAP. Desarrollo front-end con HTML5, CSS3, JavaScript y jQuery. Implementación de pipelines CI/CD con Jenkins. Monitorización con OpenShift.</p>
+      <h3>Desarrolladora Full Stack Java</h3>
+      <div class="company">Sector bancario / financiero · España</div>
+      <p>Desarrollo y mantenimiento de microservicios en Java con Spring Boot bajo arquitectura por capas. Integración con bases de datos MySQL y desarrollo de servicios SOAP. Desarrollo front-end con HTML5, CSS3, JavaScript y jQuery. Implementación de pipelines CI/CD con Jenkins. Monitorización con OpenShift.</p>
       <div class="tags">
         <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">SOAP</span>
         <span class="tag">MySQL</span><span class="tag">HTML5</span><span class="tag">JavaScript</span>
@@ -154,53 +150,53 @@
 
 <!-- ===== FORMACIÓN ===== -->
 <section id="education" class="content-section">
-  <h2 class="section-title" data-i18n="edu.title">🎓 Formación</h2>
+  <h2 class="section-title">🎓 Formación</h2>
   <div class="two-col">
 
     <div class="card edu-card reveal">
-      <h4 data-i18n="edu.daw.title">CFGS – Desarrollo de Aplicaciones Web</h4>
-      <div class="edu-center" data-i18n="edu.center">Centro de formación · España</div>
-      <div class="edu-year">2014 – 2016</div>
-      <p data-i18n="edu.daw.desc">Desarrollo full-stack con Java, Spring MVC, y tecnologías web. Diseño de bases de datos relacionales, creación de APIs REST y desarrollo frontend con HTML5, CSS3 y JavaScript.</p>
-      <p data-i18n="edu.daw.project"><strong>Proyecto fin de curso:</strong> <em>FunkBreakSchool</em> — plataforma web completa con gestión de usuarios, roles, horarios, inscripciones y panel de administración.</p>
+      <h4>CFGS – Desarrollo de Aplicaciones Multiplataforma</h4>
+      <div class="edu-center">Centro de formación · España</div>
+      <div class="edu-year">2016 – 2018</div>
+      <p>Desarrollo de aplicaciones móviles Android y de escritorio. Especialización en Java, bases de datos relacionales, interfaces gráficas y acceso a datos.</p>
     </div>
     <div class="card edu-card reveal">
-      <h4 data-i18n="edu.dam.title">CFGS – Desarrollo de Aplicaciones Multiplataforma</h4>
-      <div class="edu-center" data-i18n="edu.center">Centro de formación · España</div>
-      <div class="edu-year">2016 – 2018</div>
-      <p data-i18n="edu.dam.desc">Desarrollo de aplicaciones móviles Android y de escritorio. Especialización en Java, bases de datos relacionales, interfaces gráficas y acceso a datos.</p>
+      <h4>CFGS – Desarrollo de Aplicaciones Web</h4>
+      <div class="edu-center">Centro de formación · España</div>
+      <div class="edu-year">2014 – 2016</div>
+      <p>Desarrollo full-stack con Java, Spring MVC, y tecnologías web. Diseño de bases de datos relacionales, creación de APIs REST y desarrollo frontend con HTML5, CSS3 y JavaScript.</p>
+      <p><strong>Proyecto fin de curso:</strong> <em>FunkBreakSchool</em> — plataforma web completa con gestión de usuarios, roles, horarios, inscripciones y panel de administración.</p>
     </div>
 
     <div class="card edu-card reveal">
-      <h4 data-i18n="edu.cont.title">Formación continua</h4>
-      <div class="edu-center" data-i18n="edu.cont.center">Cursos online & autodidacta</div>
-      <div class="edu-year" data-i18n="edu.cont.year">2023 – Actualidad</div>
-      <p data-i18n="edu.cont.desc">Arquitectura hexagonal, DDD, microservicios, seguridad web (OWASP) y desarrollo con IA.</p>
+      <h4>Formación continua</h4>
+      <div class="edu-center">Cursos online & autodidacta</div>
+      <div class="edu-year">2023 – Actualidad</div>
+      <p>Arquitectura hexagonal, DDD, microservicios, seguridad web (OWASP) y desarrollo con IA.</p>
     </div>
   </div>
 </section>
 
 <!-- ===== PROYECTOS ===== -->
 <section id="projects" class="content-section">
-  <h2 class="section-title" data-i18n="proj.title">🚀 Proyectos</h2>
+  <h2 class="section-title">🚀 Proyectos</h2>
   <div class="proj-grid">
 
     <div class="card proj-card reveal">
       <div class="proj-emoji">🎵</div>
       <h4>FunkBreakSchool</h4>
-      <p data-i18n="proj.fbs.desc">Plataforma web para escuela de baile. Gestión de usuarios, roles, horarios, inscripciones y contenido multimedia. Proyecto de fin de grado superior.</p>
+      <p>Plataforma web para escuela de baile. Gestión de usuarios, roles, horarios, inscripciones y contenido multimedia. Proyecto de fin de grado superior.</p>
       <div class="proj-links">
-        <button class="proj-link proj-link-btn" onclick="openModal('funkbreak')" data-i18n="proj.more">Ver más</button>
+        <button class="proj-link proj-link-btn" onclick="openModal('funkbreak')">Ver más</button>
       </div>
     </div>
 
     <div class="card proj-card reveal">
       <div class="proj-emoji">🌐</div>
-      <h4 data-i18n="proj.cv.title">CV Interactivo 3D</h4>
-      <p data-i18n="proj.cv.desc">Este mismo portfolio. Construido con Three.js y JavaScript puro, sin backend, desplegable en GitHub Pages con escena 3D interactiva.</p>
+      <h4>CV Interactivo 3D</h4>
+      <p>Este mismo portfolio. Construido con Three.js y JavaScript puro, sin backend, desplegable en GitHub Pages con escena 3D interactiva.</p>
       <div class="proj-links">
         <a class="proj-link" href="https://github.com/sheilacortesfdez/interactiveSpaceCV" target="_blank" rel="noopener">GitHub →</a>
-        <button class="proj-link proj-link-btn" onclick="openModal('cv')" data-i18n="proj.more">Ver más</button>
+        <button class="proj-link proj-link-btn" onclick="openModal('cv')">Ver más</button>
       </div>
     </div>
   </div>
@@ -208,8 +204,8 @@
 
 <!-- ===== CONTACTO ===== -->
 <section id="contact" class="content-section">
-  <h2 class="section-title" data-i18n="contact.title">📬 Contacto</h2>
-  <div class="card reveal contact-intro" data-i18n="contact.intro">
+  <h2 class="section-title">📬 Contacto</h2>
+  <div class="card reveal contact-intro">
     ¿Tienes una oportunidad o quieres hablar? <strong>Estaré encantada de escucharte.</strong>
   </div>
   <div class="two-col" style="margin-top:1.2rem;">
@@ -232,7 +228,7 @@
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <p data-i18n="footer.text">Hecho con ❤️ y <strong>Three.js</strong> · Sheila Cortés Fernández © 2026</p>
+  <p>Hecho con ❤️ y <strong>Three.js</strong> · Sheila Cortés Fernández © 2026</p>
 </footer>
 
 <!-- ===== MODALES ===== -->
@@ -240,13 +236,13 @@
   <div class="modal-box" onclick="event.stopPropagation()">
     <button class="modal-close" onclick="closeModal('funkbreak')">×</button>
     <h3>🎵 FunkBreakSchool</h3>
-    <p class="modal-lead" data-i18n="modal.fbs.lead">Proyecto de fin de CFGS DAW</p>
-    <p data-i18n="modal.fbs.desc">Plataforma web completa para la gestión de una escuela de baile estilo funk y breakdance.</p>
+    <p class="modal-lead">Proyecto de fin de CFGS DAW</p>
+    <p>Plataforma web completa para la gestión de una escuela de baile estilo funk y breakdance.</p>
     <ul>
-      <li data-i18n="modal.fbs.li1"><strong>Tecnologías:</strong> Java, Spring Boot, MySQL, HTML5, CSS3, JavaScript, jQuery</li>
-      <li data-i18n="modal.fbs.li2"><strong>Funcionalidades:</strong> Registro/login con roles (alumno, profesor, admin), gestión de clases y horarios, inscripciones, panel de administración</li>
-      <li data-i18n="modal.fbs.li3"><strong>Arquitectura:</strong> MVC por capas, API REST, autenticación con sesiones</li>
-      <li data-i18n="modal.fbs.li4"><strong>Integraciones:</strong> pdf.js para visualización de contenidos, jQuery para UI dinámica</li>
+      <li><strong>Tecnologías:</strong> Java, Spring Boot, MySQL, HTML5, CSS3, JavaScript, jQuery</li>
+      <li><strong>Funcionalidades:</strong> Registro/login con roles (alumno, profesor, admin), gestión de clases y horarios, inscripciones, panel de administración</li>
+      <li><strong>Arquitectura:</strong> MVC por capas, API REST, autenticación con sesiones</li>
+      <li><strong>Integraciones:</strong> pdf.js para visualización de contenidos, jQuery para UI dinámica</li>
     </ul>
   </div>
 </div>
@@ -254,18 +250,19 @@
 <div class="modal-overlay" id="modal-cv" onclick="closeModal('cv')">
   <div class="modal-box" onclick="event.stopPropagation()">
     <button class="modal-close" onclick="closeModal('cv')">×</button>
-    <h3 data-i18n="modal.cv.title">🌐 CV Interactivo 3D</h3>
-    <p class="modal-lead" data-i18n="modal.cv.lead">Portfolio personal — sin backend, 100% estático</p>
-    <p data-i18n="modal.cv.desc">Desplegable en GitHub Pages sin ningún servidor ni build step.</p>
+    <h3>🌐 CV Interactivo 3D</h3>
+    <p class="modal-lead">Portfolio personal — sin backend, 100% estático</p>
+    <p>Desplegable en GitHub Pages sin ningún servidor ni build step.</p>
     <ul>
-      <li data-i18n="modal.cv.li1"><strong>Motor 3D:</strong> Three.js (WebGL) con partículas, objetos flotantes animados e interacción con ratón (parallax)</li>
-      <li data-i18n="modal.cv.li2"><strong>Efectos:</strong> Parallax 3D, skill-bars con IntersectionObserver, glassmorphism, animaciones CSS</li>
-      <li data-i18n="modal.cv.li3"><strong>Sin bundler:</strong> Cargado por CDN, sin npm, sin Webpack</li>
-      <li data-i18n="modal.cv.li4"><strong>Rendimiento:</strong> requestAnimationFrame, transiciones CSS hardware-accelerated</li>
+      <li><strong>Motor 3D:</strong> Three.js (WebGL) con partículas, objetos flotantes animados e interacción con ratón (parallax)</li>
+      <li><strong>Efectos:</strong> Parallax 3D, skill-bars con IntersectionObserver, glassmorphism, animaciones CSS</li>
+      <li><strong>Sin bundler:</strong> Cargado por CDN, sin npm, sin Webpack</li>
+      <li><strong>Rendimiento:</strong> requestAnimationFrame, transiciones CSS hardware-accelerated</li>
     </ul>
   </div>
 </div>
 
+<!-- Three.js desde CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="main.js"></script>
 </body>
