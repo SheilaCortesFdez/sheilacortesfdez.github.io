@@ -1,0 +1,11 @@
+{
+  "name": "cv-interactivo-3d",
+  "version": "1.0.0",
+  "description": "CV interactivo con Three.js — sin backend, sin dependencias",
+  "scripts": {
+    "start": "node server-local.js"
+  },
+  "author": "Sheila Cortés Fernández",
+  "license": "MIT"
+}
+
