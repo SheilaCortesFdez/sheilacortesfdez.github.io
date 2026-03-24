@@ -7,7 +7,8 @@ const i18n = {
     'nav.about':       'Sobre mí',
     'nav.skills':      'Habilidades',
     'nav.experience':  'Experiencia',
-    'nav.ed ucation':   'Formación',
+    'nav.education':   'Formación',
+    'nav.certifications':'Certificaciones',
     'nav.projects':    'Proyectos',
     'nav.contact':     'Contacto',
 
@@ -51,6 +52,15 @@ const i18n = {
     'edu.cont.year':    '2023 – Actualidad',
     'edu.cont.desc':    'Arquitectura hexagonal, DDD, microservicios, seguridad web (OWASP) y desarrollo con IA.',
 
+    'cert.title':      '📜 Certificaciones',
+    'cert.name1':      'Desarrollo con IA: de 0 a Producción',
+    'cert.name2':      'Spring Framework 6 & Spring Boot 3 desde cero a experto',
+    'cert.name3':      'Universidad Java: De Cero a Master ',
+    'modal.ia.lead':   'Certificación de Iniciación al Desarrollo con IA',
+    'modal.spring.lead':   'Certificación de Finalización del curso de Spring Framework 6 & Spring Boot 3',
+    'modal.UniJava.lead':   'Universidad Java: De Cero a Master',
+    'cert.button':    'Certificado →',
+
     'proj.title':    '🚀 Proyectos',
     'proj.more':     'Ver más',
     'proj.fbs.desc': 'Plataforma web para escuela de baile. Gestión de usuarios, roles, horarios, inscripciones y contenido multimedia. Proyecto de fin de grado superior.',
@@ -75,14 +85,16 @@ const i18n = {
     'modal.cv.li2':   '<strong>Efectos:</strong> Parallax 3D, skill-bars con IntersectionObserver, glassmorphism, animaciones CSS',
     'modal.cv.li3':   '<strong>Sin bundler:</strong> Cargado por CDN, sin npm, sin Webpack',
     'modal.cv.li4':   '<strong>Rendimiento:</strong> requestAnimationFrame, transiciones CSS hardware-accelerated',
+    'modal.cert.lead': 'Desarrollo con IA: de 0 a Producción',
   },
 
   en: {
-    'nav.home':        'Home',
     'nav.about':       'About',
+    'nav.home':        'Home',
     'nav.skills':      'Skills',
     'nav.experience':  'Experience',
     'nav.education':   'Education',
+    'nav.certifications':'Certifications',
     'nav.projects':    'Projects',
     'nav.contact':     'Contact',
 
@@ -121,10 +133,15 @@ const i18n = {
     'edu.daw.project':  '<strong>Final project:</strong> <em>FunkBreakSchool</em> — complete web platform with user management, roles, timetables, enrolments and admin dashboard.',
     'edu.dam.title':    'HND – Multiplatform Application Development',
     'edu.dam.desc':     'Android and desktop application development. Specialisation in Java, relational databases, graphical interfaces and data access.',
-    'edu.cont.title':   'Continuous learning',
-    'edu.cont.center':  'Online courses & self-taught',
-    'edu.cont.year':    '2023 – Present',
-    'edu.cont.desc':    'Hexagonal architecture, DDD, microservices, web security (OWASP) and AI-driven development.',
+
+    'cert.title':      '📜 Certifications',
+    'cert.name1':      'AI-powered development: from zero to production',
+    'cert.name2':      'Spring Framework 6 & Spring Boot 3 from zero to expert',
+    'cert.name3':      'Universidad Java: De Cero a Master ',
+    'modal.spring.lead':   'Spring Framework 6 & Spring Boot 3 Course Completion Certificate',
+    'modal.UniJava.lead':   'Java University: From Zero to Master',
+    'cert.button':    'Certificate →',
+
 
     'proj.title':    '🚀 Projects',
     'proj.more':     'Learn more',
@@ -150,6 +167,8 @@ const i18n = {
     'modal.cv.li2':   '<strong>Effects:</strong> 3D parallax, skill-bars with IntersectionObserver, glassmorphism, CSS animations',
     'modal.cv.li3':   '<strong>No bundler:</strong> Loaded via CDN, no npm, no Webpack',
     'modal.cv.li4':   '<strong>Performance:</strong> requestAnimationFrame, hardware-accelerated CSS transitions',
+    'modal.cert.lead': 'AI-powered development: from zero to production',
+
   },
 };
 

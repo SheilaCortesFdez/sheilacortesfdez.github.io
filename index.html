@@ -21,6 +21,7 @@
   <a href="#skills"     class="nav-link" data-i18n="nav.skills">Habilidades</a>
   <a href="#experience" class="nav-link" data-i18n="nav.experience">Experiencia</a>
   <a href="#education"  class="nav-link" data-i18n="nav.education">Formación</a>
+  <a href="#certification"  class="nav-link" data-i18n="nav.certifications">Certificaciones</a>
   <a href="#projects"   class="nav-link" data-i18n="nav.projects">Proyectos</a>
   <a href="#contact"    class="nav-link" data-i18n="nav.contact">Contacto</a>
   <!-- Selector de idioma -->
@@ -154,7 +155,6 @@
 
 <!-- ===== FORMACIÓN ===== -->
 <section id="education" class="content-section">
-  <a href="#education" class="nav-link" data-i18n="nav.education">Formación</a>
   <h2 class="section-title" data-i18n="edu.title">🎓 Formación</h2>
   <div class="two-col">
 
@@ -163,7 +163,7 @@
       <div class="edu-center" data-i18n="edu.center">Centro de formación · España</div>
       <div class="edu-year">2014 – 2016</div>
       <p data-i18n="edu.daw.desc">Desarrollo full-stack con Java, Spring MVC, y tecnologías web. Diseño de bases de datos relacionales, creación de APIs REST y desarrollo frontend con HTML5, CSS3 y JavaScript.</p>
-      <p data-i18n="edu.daw.project"><strong>Proyecto fin de curso:</strong> <em>FunkBreakSchool</em> — plataforma web completa con gestión de usuarios, roles, horarios, inscripciones y panel de administración.</p>
+      <p data-i18n="edu.daw.project"><strong>Proyecto fin de curso:</strong> <em>FunkBreakSchool</em> — Plataforma web completa con gestión de usuarios, roles, horarios, inscripciones y panel de administración.</p>
     </div>
     <div class="card edu-card reveal">
       <h4 data-i18n="edu.dam.title">CFGS – Desarrollo de Aplicaciones Multiplataforma</h4>
@@ -171,12 +171,34 @@
       <div class="edu-year">2016 – 2018</div>
       <p data-i18n="edu.dam.desc">Desarrollo de aplicaciones móviles Android y de escritorio. Especialización en Java, bases de datos relacionales, interfaces gráficas y acceso a datos.</p>
     </div>
+  </div>
+</section>
 
-    <div class="card edu-card reveal">
-      <h4 data-i18n="edu.cont.title">Formación continua</h4>
-      <div class="edu-center" data-i18n="edu.cont.center">Cursos online & autodidacta</div>
-      <div class="edu-year" data-i18n="edu.cont.year">2023 – Actualidad</div>
-      <p data-i18n="edu.cont.desc">Arquitectura hexagonal, DDD, microservicios, seguridad web (OWASP) y desarrollo con IA.</p>
+<!-- ===== CERTIFICACIONES ===== -->
+<section id="certification" class="content-section">
+  <h2 class="section-title" data-i18n="cert.title">📜 Certificaciones</h2>
+  <div class="proj-grid">
+
+    <div class="card proj-card reveal">
+      <h4 data-i18n="cert.name1">Desarrollo con IA: de 0 a Producción</h4>
+      <div class="proj-links">
+        <button class="proj-link proj-link-btn" onclick="openModal('ia')" data-i18n="proj.more">Ver más</button>
+        <a class="proj-link" href="https://certificados.thebigschool.com/wp-content/uploads/certs/MDEV2/Certificado-Sheila-Cortes-Fernandez-mh1o68vu.pdf" target="_blank" rel="noopener" data-i18n="cert.button">Certificado →</a>
+      </div>
+    </div>
+    <div class="card proj-card reveal">
+      <h4 data-i18n="cert.name2">Spring Framework 6 & Spring Boot 3 desde cero a experto</h4>
+      <div class="proj-links">
+        <button class="proj-link proj-link-btn" onclick="openModal('spring')" data-i18n="proj.more">Ver más</button>
+        <a class="proj-link" href="https://www.udemy.com/certificate/UC-2cf46462-50d6-4ddd-888f-4684662dd9dc/" target="_blank" rel="noopener" data-i18n="cert.button">Certificado →</a>
+      </div>
+    </div>
+    <div class="card proj-card reveal">
+      <h4 data-i18n="cert.name3">Universidad Java: De Cero a Master </h4>
+      <div class="proj-links">
+        <button class="proj-link proj-link-btn" onclick="openModal('UniJava')" data-i18n="proj.more">Ver más</button>
+        <a class="proj-link" href="https://www.udemy.com/certificate/UC-Q4NYAE18/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email" target="_blank" rel="noopener" data-i18n="cert.button">Certificado →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -263,6 +285,41 @@
       <li data-i18n="modal.cv.li2"><strong>Efectos:</strong> Parallax 3D, skill-bars con IntersectionObserver, glassmorphism, animaciones CSS</li>
       <li data-i18n="modal.cv.li3"><strong>Sin bundler:</strong> Cargado por CDN, sin npm, sin Webpack</li>
       <li data-i18n="modal.cv.li4"><strong>Rendimiento:</strong> requestAnimationFrame, transiciones CSS hardware-accelerated</li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-ia" onclick="closeModal('ia')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('ia')">×</button>
+    <h3 data-i18n="modal.cert.lead">Desarrollo con IA: de 0 a Producción</h3>
+    <ul>
+      <li data-i18n="modal.fbs.li1"><strong>Tecnologías:</strong> </li>
+      <li data-i18n="modal.fbs.li2"><strong>Funcionalidades:</strong> </li>
+      <li data-i18n="modal.fbs.li3"><strong>Arquitectura:</strong> </li>
+      <li data-i18n="modal.fbs.li4"><strong>Integraciones:</strong> </li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-spring" onclick="closeModal('spring')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('spring')">×</button>
+    <h3 data-i18n="modal.spring.lead">Spring Framework 6 & Spring Boot 3 desde cero a experto</h3>
+    <ul>
+      <li data-i18n="modal.fbs.li1"><strong>Tecnologías:</strong> Java, Spring Boot, MySQL, HTML5, Thymeleaf</li>
+      <li data-i18n="modal.fbs.li3"><strong>Arquitectura:</strong> MVC por capas, API REST, JWT</li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-UniJava" onclick="closeModal('UniJava')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('UniJava')">×</button>
+    <h3 data-i18n="modal.UniJava.lead">Universidad Java: De Cero a Master</h3>
+    <ul>
+      <li data-i18n="modal.fbs.li1"><strong>Tecnologías:</strong> Java, Spring Boot, MySQL, HTML5, Thymeleaf</li>
+      <li data-i18n="modal.fbs.li3"><strong>Arquitectura:</strong> MVC por capas, API REST, JWT</li>
     </ul>
   </div>
 </div>
