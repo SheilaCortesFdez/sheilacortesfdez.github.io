@@ -7,10 +7,13 @@
   --accent:       #a78bfa;
   --accent2:      #f472b6;
   --accent-glow:  rgba(167, 139, 250, 0.35);
-  --bg:           #0d0d1a;
+  --bg:           #080814;
+  --bg-elev:      #111128;
   --surface:      #12122a;
-  --glass:        rgba(255, 255, 255, 0.05);
+  --glass:        rgba(255, 255, 255, 0.08);
   --glass-border: rgba(255, 255, 255, 0.10);
+  --card-bg:      rgba(255, 255, 255, 0.14);
+  --card-border:  rgba(255, 255, 255, 0.22);
   --text:         #e2e8f0;
   --text-dim:     #94a3b8;
   --radius:       14px;
@@ -19,7 +22,12 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--bg);
+  /* Fondo más consistente para mejorar legibilidad sobre el canvas */
+  background:
+    radial-gradient(1200px 700px at 12% -5%, rgba(167, 139, 250, 0.16), transparent 55%),
+    radial-gradient(1000px 600px at 90% 10%, rgba(244, 114, 182, 0.10), transparent 60%),
+    linear-gradient(180deg, var(--bg-elev) 0%, var(--bg) 45%, #070712 100%);
+  background-attachment: fixed;
   color: var(--text);
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
@@ -240,8 +248,11 @@ body.hero-hover #three-canvas {
    GLASS CARD
    ======================================== */
 .card {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
   border-radius: var(--radius);
   padding: 1.6rem 1.8rem;
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
@@ -280,7 +291,7 @@ body.hero-hover #three-canvas {
    SOBRE MÍ
    ======================================== */
 .about-main-card { line-height: 1.85; }
-.about-main-card p { margin-bottom: 0.8rem; color: var(--text-dim); }
+.about-main-card p { margin-bottom: 0.8rem; color: #f8fafc; }
 .about-main-card p:last-child { margin-bottom: 0; }
 .about-main-card strong { color: var(--accent); }
 
@@ -289,7 +300,7 @@ body.hero-hover #three-canvas {
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  color: var(--text-dim);
+  color: #f8fafc;
   padding: 6px 0;
   border-bottom: 1px solid var(--glass-border);
 }
@@ -315,7 +326,7 @@ body.hero-hover #three-canvas {
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 1.1rem;
-  color: var(--text);
+  color: #ffffff;
 }
 
 .skill-item {
@@ -327,13 +338,13 @@ body.hero-hover #three-canvas {
 .skill-item > span:first-child {
   width: 130px;
   font-size: 13px;
-  color: var(--text-dim);
+  color: #f8fafc;
   flex-shrink: 0;
 }
 .skill-item > span:last-child {
   width: 32px;
   font-size: 12px;
-  color: var(--text-dim);
+  color: #f8fafc;
   text-align: right;
   flex-shrink: 0;
 }
@@ -373,8 +384,10 @@ body.hero-hover #three-canvas {
 .timeline-item {
   position: relative;
   margin-bottom: 2.5rem;
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: var(--radius);
   padding: 1.4rem 1.6rem;
   transition: transform 0.3s, border-color 0.3s;
@@ -436,8 +449,8 @@ body.hero-hover #three-canvas {
    ======================================== */
 .edu-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
 .edu-center { font-size: 13px; color: var(--accent); margin-bottom: 3px; }
-.edu-year { font-size: 12px; color: var(--text-dim); margin-bottom: 10px; }
-.edu-card p { font-size: 13px; color: var(--text-dim); line-height: 1.7; }
+.edu-year { font-size: 12px; color: #f8fafc; margin-bottom: 10px; }
+.edu-card p { font-size: 13px; color: #f8fafc; line-height: 1.7; }
 
 /* ========================================
    PROYECTOS
@@ -451,7 +464,7 @@ body.hero-hover #three-canvas {
 .proj-card { /* sin onclick, el cursor lo gestionan los hijos */ }
 .proj-emoji { font-size: 2.2rem; margin-bottom: 10px; }
 .proj-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
-.proj-card p { font-size: 13px; color: var(--text-dim); line-height: 1.75; margin-bottom: 14px; }
+.proj-card p { font-size: 13px; color: #f8fafc; line-height: 1.75; margin-bottom: 14px; }
 
 .proj-links { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; position: relative; z-index: 1; }
 .proj-link {
@@ -483,7 +496,7 @@ body.hero-hover #three-canvas {
 .contact-intro {
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--text-dim);
+  color: #f8fafc;
 }
 .contact-intro strong { color: var(--text); }
 
@@ -512,7 +525,7 @@ body.hero-hover #three-canvas {
 
 .contact-label {
   font-size: 12px;
-  color: var(--text-dim);
+  color: #f8fafc;
   margin-bottom: 2px;
 }
 
