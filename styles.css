@@ -267,6 +267,7 @@ body.hero-hover #three-canvas {
   border-radius: inherit;
   opacity: 0;
   transition: opacity 0.3s;
+  pointer-events: none;
 }
 .card:hover {
   transform: translateY(-4px);
@@ -310,6 +311,9 @@ body.hero-hover #three-canvas {
   color: var(--accent);
   text-decoration: none;
   transition: opacity 0.2s;
+  cursor: pointer,
+  position: relative,
+  z-index: 2;
 }
 .info-item a:hover { opacity: 0.75; text-decoration: underline; }
 
