@@ -43,7 +43,7 @@ const i18n = {
     'edu.title':        '🎓 Formación',
     'edu.center':       'Centro de formación · España',
     'edu.daw.title':    'CFGS – Desarrollo de Aplicaciones Web',
-    'edu.daw.desc':     'Desarrollo full-stack con Java, Spring MVC, y tecnologías web. Diseño de bases de datos relacionales, creación de APIs REST y desarrollo frontend con HTML5, CSS3 y JavaScript.',
+    'edu.daw.desc':     'Desarrollo deaplicaciones con tecnologías web. Diseño de bases de datos relacionales y desarrollo frontend con HTML5, CSS, JavaScript y JQuery.',
     'edu.daw.project':  '<strong>Proyecto fin de curso:</strong> <em>FunkBreakSchool</em> — plataforma web completa con gestión de usuarios, roles, horarios, inscripciones y panel de administración.',
     'edu.dam.title':    'CFGS – Desarrollo de Aplicaciones Multiplataforma',
     'edu.dam.desc':     'Desarrollo de aplicaciones móviles Android y de escritorio. Especialización en Java, bases de datos relacionales, interfaces gráficas y acceso a datos.',
@@ -69,14 +69,29 @@ const i18n = {
 
     'contact.title': '📬 Contacto',
     'contact.intro': '¿Tienes una oportunidad o quieres hablar? <strong>Estaré encantada de escucharte.</strong>',
+    'contact.form.title': 'Escríbeme un mensaje',
+    'contact.form.modalTitle': 'Formulario de contacto',
+    'contact.form.teaser': 'Si prefieres, puedes abrir un formulario rápido y enviarme un email.',
+    'contact.form.open': 'Abrir formulario',
+    'contact.form.name': 'Nombre',
+    'contact.form.email': 'Email',
+    'contact.form.company': 'Empresa (opcional)',
+    'contact.form.message': 'Mensaje',
+    'contact.form.submit': 'Enviar Email',
+    'contact.form.namePh': 'Tu nombre',
+    'contact.form.emailPh': 'tu@email.com',
+    'contact.form.messagePh': 'Cuéntame sobre la oportunidad',
+    'contact.form.status.missingEndpoint': 'Error: No se ha configurado el endpoint de envío.',
+    'contact.form.status.sending': 'Enviando mensaje...',
+    'contact.form.status.success': '¡Mensaje enviado con éxito! Te responderé lo antes posible.',
+    'contact.form.error': 'Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.',
 
     'footer.text': 'Hecho con ❤️ y <strong>Three.js</strong> · Sheila Cortés Fernández © 2026',
 
     'modal.fbs.lead': 'Proyecto de fin de CFGS DAW',
     'modal.fbs.desc': 'Plataforma web completa para la gestión de una escuela de baile estilo funk y breakdance.',
-    'modal.fbs.li1':  '<strong>Tecnologías:</strong> Java, Spring Boot, MySQL, HTML5, CSS3, JavaScript, jQuery',
+    'modal.fbs.li1':  '<strong>Tecnologías:</strong> php, MySQL, HTML5, CSS3, JavaScript, Bootstrap, SweeatAlert, jQuery',
     'modal.fbs.li2':  '<strong>Funcionalidades:</strong> Registro/login con roles (alumno, profesor, admin), gestión de clases y horarios, inscripciones, panel de administración',
-    'modal.fbs.li3':  '<strong>Arquitectura:</strong> MVC por capas, API REST, autenticación con sesiones',
     'modal.fbs.li4':  '<strong>Integraciones:</strong> pdf.js para visualización de contenidos, jQuery para UI dinámica',
     'modal.cv.title': '🌐 CV Interactivo 3D',
     'modal.cv.lead':  'Portfolio personal — sin backend, 100% estático',
@@ -129,7 +144,7 @@ const i18n = {
     'edu.title':        '🎓 Education',
     'edu.center':       'Training centre · Spain',
     'edu.daw.title':    'HND – Web Application Development',
-    'edu.daw.desc':     'Full-stack development with Java, Spring MVC and web technologies. Relational database design, REST API creation and frontend development with HTML5, CSS3 and JavaScript.',
+    'edu.daw.desc':     'Web application development. Relational database design and frontend development using HTML5, CSS, JavaScript and jQuery.',
     'edu.daw.project':  '<strong>Final project:</strong> <em>FunkBreakSchool</em> — complete web platform with user management, roles, timetables, enrolments and admin dashboard.',
     'edu.dam.title':    'HND – Multiplatform Application Development',
     'edu.dam.desc':     'Android and desktop application development. Specialisation in Java, relational databases, graphical interfaces and data access.',
@@ -151,14 +166,30 @@ const i18n = {
 
     'contact.title': '📬 Contact',
     'contact.intro': 'Have an opportunity or want to chat? <strong>I would love to hear from you.</strong>',
+    'contact.form.title': 'Message me',
+    'contact.form.modalTitle': 'Contact form',
+    'contact.form.teaser': 'If you prefer, open a quick form and send me an email.',
+    'contact.form.open': 'Open form',
+    'contact.form.name': 'Name',
+    'contact.form.email': 'Mail',
+    'contact.form.company': 'Company (optional)',
+    'contact.form.message': 'Message',
+    'contact.form.submit': 'Send email',
+    'contact.form.namePh': 'Your name',
+    'contact.form.emailPh': 'you@email.com',
+    'contact.form.companyPh': 'Company name',
+    'contact.form.messagePh': 'Tell me about the opportunity',
+    'contact.form.status.missingEndpoint': 'Error: The send endpoint has not been configured.',
+    'contact.form.status.sending': 'Sending message...',
+    'contact.form.status.success': '¡Message succesfully! I will reply as soon as possible..',
+    'contact.form.error': 'Could not send the message. Please try again in a few seconds.',
 
     'footer.text': 'Made with ❤️ and <strong>Three.js</strong> · Sheila Cortés Fernández © 2026',
 
     'modal.fbs.lead': 'HND DAW final project',
     'modal.fbs.desc': 'Complete web platform for managing a funk and breakdance school.',
-    'modal.fbs.li1':  '<strong>Technologies:</strong> Java, Spring Boot, MySQL, HTML5, CSS3, JavaScript, jQuery',
+    'modal.fbs.li1':  '<strong>Technologies:</strong> php, MySQL, HTML5, CSS3, JavaScript, Bootstrap, SweeatAlert, jQuery',
     'modal.fbs.li2':  '<strong>Features:</strong> Registration/login with roles (student, teacher, admin), class and schedule management, enrolments, admin panel',
-    'modal.fbs.li3':  '<strong>Architecture:</strong> Layered MVC, REST API, session-based authentication',
     'modal.fbs.li4':  '<strong>Integrations:</strong> pdf.js for content display, jQuery for dynamic UI',
     'modal.cv.title': '🌐 Interactive 3D CV',
     'modal.cv.lead':  'Personal portfolio — no backend, 100% static',
@@ -190,6 +221,13 @@ function applyLang(lang) {
       el.innerHTML = dict[key];
     }
   });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+        const key = el.getAttribute('data-i18n-placeholder');
+            if(dict[key] !== undefined) {
+                el.setAttribute('placeholder', dict[key]);
+            }
+    });
 }
 
 function toggleLang() {

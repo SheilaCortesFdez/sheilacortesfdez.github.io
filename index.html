@@ -162,7 +162,7 @@
       <h4 data-i18n="edu.daw.title">CFGS – Desarrollo de Aplicaciones Web</h4>
       <div class="edu-center" data-i18n="edu.center">Centro de formación · España</div>
       <div class="edu-year">2014 – 2016</div>
-      <p data-i18n="edu.daw.desc">Desarrollo full-stack con Java, Spring MVC, y tecnologías web. Diseño de bases de datos relacionales, creación de APIs REST y desarrollo frontend con HTML5, CSS3 y JavaScript.</p>
+      <p data-i18n="edu.daw.desc">Desarrollo deaplicaciones con tecnologías web. Diseño de bases de datos relacionales y desarrollo frontend con HTML5, CSS, JavaScript y JQuery.</p>
       <p data-i18n="edu.daw.project"><strong>Proyecto fin de curso:</strong> <em>FunkBreakSchool</em> — Plataforma web completa con gestión de usuarios, roles, horarios, inscripciones y panel de administración.</p>
     </div>
     <div class="card edu-card reveal">
@@ -182,21 +182,18 @@
     <div class="card proj-card reveal">
       <h4 data-i18n="cert.name1">Desarrollo con IA: de 0 a Producción</h4>
       <div class="proj-links">
-        <button class="proj-link proj-link-btn" onclick="openModal('ia')" data-i18n="proj.more">Ver más</button>
         <a class="proj-link" href="https://certificados.thebigschool.com/wp-content/uploads/certs/MDEV2/Certificado-Sheila-Cortes-Fernandez-mh1o68vu.pdf" target="_blank" rel="noopener" data-i18n="cert.button">Certificado →</a>
       </div>
     </div>
     <div class="card proj-card reveal">
       <h4 data-i18n="cert.name2">Spring Framework 6 & Spring Boot 3 desde cero a experto</h4>
       <div class="proj-links">
-        <button class="proj-link proj-link-btn" onclick="openModal('spring')" data-i18n="proj.more">Ver más</button>
         <a class="proj-link" href="https://www.udemy.com/certificate/UC-2cf46462-50d6-4ddd-888f-4684662dd9dc/" target="_blank" rel="noopener" data-i18n="cert.button">Certificado →</a>
       </div>
     </div>
     <div class="card proj-card reveal">
       <h4 data-i18n="cert.name3">Universidad Java: De Cero a Master </h4>
       <div class="proj-links">
-        <button class="proj-link proj-link-btn" onclick="openModal('UniJava')" data-i18n="proj.more">Ver más</button>
         <a class="proj-link" href="https://www.udemy.com/certificate/UC-Q4NYAE18/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email" target="_blank" rel="noopener" data-i18n="cert.button">Certificado →</a>
       </div>
     </div>
@@ -251,6 +248,11 @@
       </div>
     </a>
   </div>
+  <div class="card reveal contact-mini-card" style="margin-top:1.2rem;">
+    <h3 data-i18n="contact.form.title">¿Prefieres un correo?</h3>
+    <p data-i18n="contact.form.teaser">Si prefieres, puedes abrir un formulario rápido y enviarme un email.</p>
+    <button class="proj-link proj-link-btn" onclick="openModal('contactForm')" data-i18n="contact.form.open">Abrir formulario</button>
+  </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
@@ -266,9 +268,8 @@
     <p class="modal-lead" data-i18n="modal.fbs.lead">Proyecto de fin de CFGS DAW</p>
     <p data-i18n="modal.fbs.desc">Plataforma web completa para la gestión de una escuela de baile estilo funk y breakdance.</p>
     <ul>
-      <li data-i18n="modal.fbs.li1"><strong>Tecnologías:</strong> Java, Spring Boot, MySQL, HTML5, CSS3, JavaScript, jQuery</li>
+      <li data-i18n="modal.fbs.li1"><strong>Tecnologías:</strong> php, MySQL, HTML5, CSS3, JavaScript, Bootstrap, SweeatAlert, jQuery</li>
       <li data-i18n="modal.fbs.li2"><strong>Funcionalidades:</strong> Registro/login con roles (alumno, profesor, admin), gestión de clases y horarios, inscripciones, panel de administración</li>
-      <li data-i18n="modal.fbs.li3"><strong>Arquitectura:</strong> MVC por capas, API REST, autenticación con sesiones</li>
       <li data-i18n="modal.fbs.li4"><strong>Integraciones:</strong> pdf.js para visualización de contenidos, jQuery para UI dinámica</li>
     </ul>
   </div>
@@ -323,6 +324,30 @@
     </ul>
   </div>
 </div>
+
+<div class="modal-overlay" id="modal-contactForm" onclick="closeModal('contactForm')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('contactForm')">×</button>
+    <h3 data-i18n="contact.form.modalTitle">Formulario de contacto</h3>
+    <form id="contact-form" class="contact-form" data-endpoint="https://formspree.io/f/mvzvpjvn">
+      <label for="contact-name" data-i18n="contact.form.name">Nombre:</label>
+      <input id="contact-name" name="name" type="text" data-i18n-placeholder="contact.form.namePh" placeholder="Tu nombre" required>
+
+      <label for="contact-email" data-i18n="contact.form.email">Email:</label>
+      <input id="contact-email" name="email" type="email" data-i18n-placeholder="contact.form.emailPh" placeholder="tu@email.com" required>
+
+      <label for="contact-company" data-i18n="contact.form.company">Empresa (opcional)</label>
+      <input id="contact-company" name="message" data-i18n-placeholder="contact.form.company" placeholder="Nombre de la empresa">
+
+      <label for="contact-message" data-i18n="contact.form.message">Mensaje:</label>
+      <textarea id="contact-message" name="message" rows="5" data-i18n-placeholder="contact.form.messagePh" placeholder="Cuéntame sobre la oportunidad" required></textarea>
+
+      <button type="submit" class="proj-link" data-i18n="contact.form.submit">Enviar email</button>
+      <p id="contact-form-status" class="contact-form-status" aria-live="polite"></p>
+    </form>
+    </div>
+</div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="js/i18n.js"></script>

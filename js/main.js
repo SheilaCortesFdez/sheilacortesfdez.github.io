@@ -404,3 +404,74 @@ function scrollToSection(sectionId) {
   update();
 })();
 
+/* ================================================================
+   8. FORMULARIO DE CONTACTO (envío simulado sin backend)
+   ================================================================ */
+(function initContactForm() {
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('contact-form-status');
+  if (!form || !status) return;
+
+  function t(key, fallback) {
+    if(typeof i18n !== 'undefined' && typeof currentLang !== "undefined" && i18n[currentLang] && i18n[currentLang][key]) {
+        return i18n[currentLang][key];
+    }
+    return fallback;
+  }
+
+  form.addEventListener('submit', async(e) => {
+    e.preventDefault();
+    if(!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
+
+    const endpoint = (form.dataset.endpoint || '').trim();
+    if (!endpoint || endpoint.includes('REEMPLAZA_TU_ID')) {
+      status.textContent = t('contact.form-status.missingEndpoint', 'Error: No se ha configurado el endpoint de envío.');
+      return;
+    }
+    const nameInput = form.querySelector('#contact-name');
+    const emailInput = form.querySelector('#contact-email');
+    const companyInput = form.querySelector('#contact-company');
+    const messageInput = form.querySelector('#contact-message');
+    if(!nameInput || !emailInput || !companyInput || !messageInput) return;
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const company = companyInput.value.trim();
+    const message = messageInput.value.trim();
+
+    const subject = company ? `Oportunidad profesional - ${company})` : `Oportunidad profesional`;
+
+    const payload = {
+        name,
+        email,
+        company,
+        message,
+        _subject: subject,
+    };
+
+    try {
+        status.textContent = t('contact.form.status.sending', 'Enviando mensaje...');
+
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+             'Accept': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+
+        if(!response.ok){
+            throw new Error('send_failed');
+        }
+
+        form.reset();
+        status.textContent = t('contact.form.status.success', '¡Mensaje enviado con éxito! Te responderé lo antes posible.');
+    } catch (error){
+        status.textContent = t('contact.form.error', 'Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
+    }
+  });
+})();
