@@ -66,6 +66,16 @@ const i18n = {
     'proj.fbs.desc': 'Plataforma web para escuela de baile. Gestión de usuarios, roles, horarios, inscripciones y contenido multimedia. Proyecto de fin de grado superior.',
     'proj.cv.title': 'CV Interactivo 3D',
     'proj.cv.desc':  'Este mismo portfolio. Construido con Three.js y JavaScript puro, sin backend, desplegable en GitHub Pages con escena 3D interactiva.',
+    'proj.crochet.title': 'mCrochet',
+    'proj.crochet.desc':  'Aplicación para amantes del crochet. Próximamente disponible.',
+
+    'modal.crochet.title': '🧶 mCrochet – Próximamente',
+    'modal.crochet.lead':  'Proyecto personal en desarrollo',
+    'modal.crochet.desc':  'Aplicación dedicada al mundo del crochet. Encarga tu muñecos crochet.',
+    'modal.crochet.li1':   '<strong>Tecnologías:</strong> ',
+    'modal.crochet.li2':   '<strong>Funcionalidades:</strong> Encarga tus muñecos favoritos',
+    'modal.crochet.li3':   '<strong>Estado:</strong> En desarrollo — próximamente disponible ',
+    'modal.crochet.li4':   '<strong>Motivación:</strong> Proyecto personal',
 
     'contact.title': '📬 Contacto',
     'contact.intro': '¿Tienes una oportunidad o quieres hablar? <strong>Estaré encantada de escucharte.</strong>',
@@ -163,6 +173,16 @@ const i18n = {
     'proj.fbs.desc': 'Web platform for a dance school. User management, roles, timetables, enrolments and multimedia content. Higher education final project.',
     'proj.cv.title': 'Interactive 3D CV',
     'proj.cv.desc':  'This very portfolio. Built with Three.js and vanilla JavaScript, no backend, deployable on GitHub Pages with an interactive 3D scene.',
+    'proj.crochet.title': 'mCrochet',
+    'proj.crochet.desc':  'App for crochet lovers. Coming soon.',
+
+    'modal.crochet.title': '🧶 mCrochet – Coming soon',
+    'modal.crochet.lead':  'Personal project under development',
+    'modal.crochet.desc':  'App dedicated to the world of crochet. Order your crochet dolls.',
+    'modal.crochet.li1':   '<strong>Technologies:</strong> ',
+    'modal.crochet.li2':   '<strong>Features:</strong> Order your favourite dolls',
+    'modal.crochet.li3':   '<strong>Status:</strong> Under development — coming soon',
+    'modal.crochet.li4':   '<strong>Motivation:</strong> Personal project',
 
     'contact.title': '📬 Contact',
     'contact.intro': 'Have an opportunity or want to chat? <strong>I would love to hear from you.</strong>',

@@ -223,6 +223,15 @@
         <button class="proj-link proj-link-btn" onclick="openModal('cv')" data-i18n="proj.more">Ver más</button>
       </div>
     </div>
+
+    <div class="card proj-card reveal">
+      <div class="proj-emoji">🧶</div>
+      <h4 data-i18n="proj.crochet.title">mCrochet</h4>
+      <p data-i18n="proj.crochet.desc">Aplicación dedicada al mundo del crochet. Encarga tus muñecos crochet. Próximamente disponible.</p>
+      <div class="proj-links">
+        <button class="proj-link proj-link-btn" onclick="openModal('crochet')" data-i18n="proj.more">Ver más</button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -251,6 +260,7 @@
   <div class="card reveal contact-mini-card" style="margin-top:1.2rem;">
     <h3 data-i18n="contact.form.title">¿Prefieres un correo?</h3>
     <p data-i18n="contact.form.teaser">Si prefieres, puedes abrir un formulario rápido y enviarme un email.</p>
+      </br>
     <button class="proj-link proj-link-btn" onclick="openModal('contactForm')" data-i18n="contact.form.open">Abrir formulario</button>
   </div>
 </section>
@@ -288,6 +298,21 @@
       <li data-i18n="modal.cv.li4"><strong>Rendimiento:</strong> requestAnimationFrame, transiciones CSS hardware-accelerated</li>
     </ul>
   </div>
+</div>
+
+<div class="modal-overlay" id="modal-crochet" onclick="closeModal('crochet')">
+    <div class="modal-box" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal('crochet')">×</button>
+        <h3 data-i18n="modal.crochet.title">🧶 mCrochet – Próximamente</h3>
+        <p class="modal-lead" data-i18n="modal.crochet.lead">Proyecto personal en desarrollo</p>
+        <p data-i18n="modal.crochet.desc">Aplicación dedicada al mundo del crochet. Encarga tu muñecos crochet.</p>
+        <ul>
+            <li data-i18n="modal.crochet.li1"><strong>Tecnologías:</strong> </li>
+            <li data-i18n="modal.crochet.li2"><strong>Funcionalidades:</strong> Encarga tus muñecos favoritos</li>
+            <li data-i18n="modal.crochet.li3"><strong>Estado:</strong> En desarrollo — próximamente disponible </li>
+            <li data-i18n="modal.crochet.li4"><strong>Motivación:</strong> Proyecto personal</li>
+        </ul>
+    </div>
 </div>
 
 <div class="modal-overlay" id="modal-ia" onclick="closeModal('ia')">

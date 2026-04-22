@@ -287,20 +287,69 @@
    2. NAVEGACIÓN ACTIVA (IntersectionObserver)
    ================================================================ */
 (function initNav() {
-  const sections  = document.querySelectorAll('section[id], .content-section[id]');
-  const navLinks  = document.querySelectorAll('.nav-link');
+  const sections = Array.from(document.querySelectorAll('section[id], .content-section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+  const visibleSections = new Map();
+
+  if (!sections.length || !navLinks.length) return;
+
+  function setActiveLink(sectionId) {
+    navLinks.forEach((link) => {
+      const isActive = link.getAttribute('href') === `#${sectionId}`;
+      link.classList.toggle('active', isActive);
+    });
+  }
+
+  function getFallbackSectionId() {
+    const navHeight = document.getElementById('main-nav')?.offsetHeight || 0;
+    const offset = navHeight + 24;
+    let currentSectionId = sections[0].id;
+
+    sections.forEach((section) => {
+      if (window.scrollY >= section.offsetTop - offset) {
+        currentSectionId = section.id;
+      }
+    });
+
+    return currentSectionId;
+  }
+
+  function updateActiveLink() {
+    const currentSectionId = visibleSections.size
+      ? Array.from(visibleSections.entries()).sort((a, b) => b[1] - a[1])[0][0]
+      : getFallbackSectionId();
+
+    setActiveLink(currentSectionId);
+  }
 
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        navLinks.forEach((a) => a.classList.remove('active'));
-        const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-        if (active) active.classList.add('active');
+        visibleSections.set(entry.target.id, entry.intersectionRatio);
+      } else {
+        visibleSections.delete(entry.target.id);
       }
     });
-  }, { rootMargin: '-40% 0px -55% 0px' });
 
-  sections.forEach((s) => obs.observe(s));
+    updateActiveLink();
+  }, {
+    rootMargin: '-18% 0px -48% 0px',
+    threshold: [0.15, 0.3, 0.45, 0.6],
+  });
+
+  sections.forEach((section) => obs.observe(section));
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      const sectionId = link.getAttribute('href')?.replace('#', '');
+      if (sectionId) setActiveLink(sectionId);
+
+      window.requestAnimationFrame(() => link.blur());
+    });
+  });
+
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+  updateActiveLink();
 })();
 
 
