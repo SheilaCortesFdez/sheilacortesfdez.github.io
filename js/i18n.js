@@ -26,6 +26,10 @@ const i18n = {
     'about.languages': 'Español (nativo) · Inglés (B1)',
 
     'skills.title':  '🛠️ Habilidades técnicas',
+    'skills.legend.1': 'Básico',
+    'skills.legend.3': 'Intermedio',
+    'skills.legend.4': 'Avanzado',
+    'skills.legend.5': 'Profesional',
     'skills.db':     'Bases de datos',
     'skills.testing':'Testing & Calidad',
     'skills.arch':   'Arquitectura & Patrones',
@@ -137,6 +141,10 @@ const i18n = {
     'about.languages': 'Spanish (native) · English (B1)',
 
     'skills.title':  '🛠️ Technical skills',
+    'skills.legend.1': 'Basic',
+    'skills.legend.3': 'Intermediate',
+    'skills.legend.4': 'Advanced',
+    'skills.legend.5': 'Professional',
     'skills.db':     'Databases',
     'skills.testing':'Testing & Quality',
     'skills.arch':   'Architecture & Patterns',

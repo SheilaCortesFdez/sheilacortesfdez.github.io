@@ -382,18 +382,18 @@
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
 
-      // Animar cada barra de la tarjeta con delay escalonado
-      const fills = entry.target.querySelectorAll('.skill-fill');
-      fills.forEach((fill, i) => {
-        const pct = fill.dataset.pct || '70';
-        // Resetear a 0 por si el elemento ya fue visible antes
-        fill.style.transition = 'none';
-        fill.style.width = '0%';
-        // Forzar reflow para que el navegador registre el 0% antes de animar
-        void fill.offsetWidth;
-        // Restaurar transición y animar con delay escalonado
-        fill.style.transition = `width 1.4s cubic-bezier(0.16, 1, 0.3, 1) ${i * 120}ms`;
-        fill.style.width = pct + '%';
+      // Renderizar puntos de nivel
+      const dotContainers = entry.target.querySelectorAll('.skill-dots');
+      dotContainers.forEach((container, i) => {
+        if (container.children.length > 0) return; // ya renderizado
+        const level = parseInt(container.dataset.level || '3');
+        const max = parseInt(container.dataset.max || '5');
+        for (let d = 1; d <= max; d++) {
+          const dot = document.createElement('span');
+          dot.className = 'skill-dot' + (d <= level ? ' filled' : '');
+          dot.style.transitionDelay = `${i * 80 + d * 60}ms`;
+          container.appendChild(dot);
+        }
       });
 
       obs.unobserve(entry.target);
