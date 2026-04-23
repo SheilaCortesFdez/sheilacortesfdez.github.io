@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>LinkedIn Banner – Sheila Cortés</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1200px;
+      height: 627px;
+      overflow: hidden;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0d0d1a;
+    }
+
+    .banner {
+      width: 1200px;
+      height: 627px;
+      background: linear-gradient(135deg, #0d0d1a 0%, #1a0a2e 50%, #0d0d1a 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 0 80px;
+      gap: 80px;
+      overflow: hidden;
+    }
+
+    /* Fondo decorativo */
+    .bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.15;
+    }
+    .bg-circle-1 {
+      width: 500px; height: 500px;
+      background: #a78bfa;
+      top: -150px; right: -100px;
+    }
+    .bg-circle-2 {
+      width: 300px; height: 300px;
+      background: #f472b6;
+      bottom: -100px; left: 200px;
+    }
+    .bg-circle-3 {
+      width: 200px; height: 200px;
+      background: #60a5fa;
+      top: 50px; left: -50px;
+    }
+
+    /* Grid decorativo */
+    .grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(167,139,250,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(167,139,250,0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Lado izquierdo: texto */
+    .left {
+      flex: 1;
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(90deg, rgba(167,139,250,0.2), rgba(244,114,182,0.2));
+      border: 1px solid rgba(167,139,250,0.4);
+      color: #c4b5fd;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 52px;
+      font-weight: 700;
+      color: #f1f5f9;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, #a78bfa, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #94a3b8;
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+
+    .tag {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(167,139,250,0.25);
+      color: #c4b5fd;
+      font-size: 13px;
+      padding: 5px 14px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .url {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #e2e8f0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .url-icon {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, #a78bfa, #f472b6);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    /* Lado derecho: mockup */
+    .right {
+      position: relative;
+      z-index: 2;
+      flex-shrink: 0;
+    }
+
+    .mockup {
+      width: 340px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(167,139,250,0.2);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+    }
+
+    .mockup-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-red { background: #ff5f57; }
+    .dot-yellow { background: #febc2e; }
+    .dot-green { background: #28c840; }
+
+    .mockup-title {
+      color: #94a3b8;
+      font-size: 12px;
+      margin-left: 8px;
+      font-family: monospace;
+    }
+
+    .skill-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .skill-name {
+      color: #e2e8f0;
+      font-size: 13px;
+      font-weight: 500;
+      width: 120px;
+    }
+
+    .dots-wrap {
+      display: flex;
+      gap: 5px;
+    }
+
+    .sk-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+
+    .sk-dot.filled {
+      background: linear-gradient(135deg, #f472b6, #fb923c);
+    }
+
+    .sk-dot.empty {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.2);
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(167,139,250,0.15);
+      margin: 16px 0;
+    }
+
+    .mockup-footer {
+      text-align: center;
+      font-size: 11px;
+      color: #64748b;
+      font-family: monospace;
+    }
+
+    .mockup-footer span {
+      color: #a78bfa;
+    }
+  </style>
+</head>
+<body>
+<div class="banner">
+  <div class="bg-circle bg-circle-1"></div>
+  <div class="bg-circle bg-circle-2"></div>
+  <div class="bg-circle bg-circle-3"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- IZQUIERDA -->
+  <div class="left">
+    <div class="badge">✦ Portfolio Interactivo · sheilacortesfdez.github.io</div>
+    <h1>Sheila Cortés<br><span>Fernández</span></h1>
+    <p class="subtitle">Backend Developer · Java · Spring Boot</p>
+    <div class="tags">
+      <span class="tag">Java</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">APIs REST</span>
+      <span class="tag">Oracle</span>
+      <span class="tag">Jenkins</span>
+      <span class="tag">OpenShift</span>
+    </div>
+    <div class="url">
+      <div class="url-icon">🌐</div>
+      sheilacortesfdez.github.io
+    </div>
+  </div>
+
+  <!-- DERECHA: mockup -->
+  <div class="right">
+    <div class="mockup">
+      <div class="mockup-header">
+        <div class="dot dot-red"></div>
+        <div class="dot dot-yellow"></div>
+        <div class="dot dot-green"></div>
+        <span class="mockup-title">skills.java</span>
+      </div>
+
+      <div class="skill-row">
+        <span class="skill-name">Java</span>
+        <div class="dots-wrap">
+          <div class="sk-dot filled"></div><div class="sk-dot filled"></div>
+          <div class="sk-dot filled"></div><div class="sk-dot filled"></div>
+          <div class="sk-dot filled"></div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Spring Boot</span>
+        <div class="dots-wrap">
+          <div class="sk-dot filled"></div><div class="sk-dot filled"></div>
+          <div class="sk-dot filled"></div><div class="sk-dot filled"></div>
+          <div class="sk-dot filled"></div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">APIs REST</span>
+        <div class="dots-wrap">
+          <div class="sk-dot filled"></div><div class="sk-dot filled"></div>
+          <div class="sk-dot filled"></div><div class="sk-dot filled"></div>
+          <div class="sk-dot filled"></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="skill-row">
+        <span class="skill-name">MySQL</span>
+        <div class="dots-wrap">
+          <div class="sk-dot filled"></div><div class="sk-dot filled"></div>
+          <div class="sk-dot filled"></div><div class="sk-dot filled"></div>
+          <div class="sk-dot empty"></div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">JUnit5</span>
+        <div class="dots-wrap">
+          <div class="sk-dot filled"></div><div class="sk-dot filled"></div>
+          <div class="sk-dot filled"></div><div class="sk-dot filled"></div>
+          <div class="sk-dot empty"></div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Git / GitHub</span>
+        <div class="dots-wrap">
+          <div class="sk-dot filled"></div><div class="sk-dot filled"></div>
+          <div class="sk-dot filled"></div><div class="sk-dot filled"></div>
+          <div class="sk-dot empty"></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="mockup-footer">8 años · sector <span>bancario</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
