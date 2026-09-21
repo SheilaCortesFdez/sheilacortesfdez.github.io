@@ -491,7 +491,7 @@ function scrollToSection(sectionId) {
     const company = companyInput.value.trim();
     const message = messageInput.value.trim();
 
-    const subject = company ? `Oportunidad profesional - ${company})` : `Oportunidad profesional`;
+    const subject = company ? `Oportunidad profesional - ${company}` : 'Oportunidad profesional';
 
     const payload = {
         name,

@@ -21,6 +21,7 @@ const i18n = {
     'about.p1':        'Soy <strong>Sheila Cortés Fernández</strong>, desarrolladora de software con sólidos conocimientos en <strong>Java y Spring Boot</strong>. Me apasiona crear soluciones robustas, limpias y bien estructuradas.',
     'about.p2':        'He trabajado con arquitecturas por capas y hexagonal, integración de bases de datos relacionales y NoSQL, testing automatizado y entornos de producción monitorizados con herramientas como Dynatrace y OpenShift.',
     'about.p3':        'Busco seguir creciendo en equipos donde la calidad del código, las buenas prácticas y el trabajo en equipo sean valores fundamentales.',
+    'about.p4':        'Actualmente estoy especialmente interesada en posiciones de <strong>Backend Java / Software Engineer</strong> donde pueda seguir trabajando en sistemas distribuidos, arquitectura backend y mejora continua de aplicaciones en producción.',
     'about.location':  'España',
     'about.role':      'Backend Software Engineer',
     'about.languages': 'Español (nativo) · Inglés (B1)',
@@ -158,6 +159,7 @@ const i18n = {
     'about.p1':        'I am <strong>Sheila Cortés Fernández</strong>, a software developer with strong knowledge in <strong>Java and Spring Boot</strong>. I am passionate about building robust, clean and well-structured solutions.',
     'about.p2':        'I have worked with layered and hexagonal architectures, relational and NoSQL database integration, automated testing and production environments monitored with tools like Dynatrace and OpenShift.',
     'about.p3':        'I am looking to keep growing in teams where code quality, best practices and teamwork are core values.',
+    'about.p4':        'I am currently particularly interested in **Java Backend / Software Engineer** positions where I can continue working on distributed systems, backend architecture, and the continuous improvement of applications in production.',
     'about.location':  'Spain',
     'about.role':      'Backend Software Engineer',
     'about.languages': 'Spanish (native) · English (B1)',
@@ -301,11 +303,16 @@ function applyLang(lang) {
     });
 }
 
-function toggleLang() {
-  applyLang(currentLang === 'es' ? 'en' : 'es');
-}
-
-/* Aplicar idioma inicial al cargar */
+/* Aplicar idioma inicial y configurar selector */
 document.addEventListener('DOMContentLoaded', () => {
   applyLang(currentLang);
+
+  const langButton = document.getElementById('lang-toggle');
+
+  if (langButton) {
+    langButton.addEventListener('click', () => {
+      const newLang = currentLang === 'es' ? 'en' : 'es';
+      applyLang(newLang);
+    });
+  }
 });
