@@ -899,6 +899,27 @@ footer strong { color: var(--accent); }
   transform: scale(1.35) !important;
 }
 
+.experience-dots {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0;
+}
+
+.experience-dots li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.6;
+}
+
+.experience-dots li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 /* =========================================================
    MÓVIL
    ========================================================= */

@@ -47,9 +47,11 @@
   <h2 class="section-title" data-i18n="about.title">👩‍💻 Sobre mí</h2>
 
   <div class="card reveal about-main-card">
-    <p data-i18n="about.p1">Soy <strong>Sheila Cortés Fernández</strong>, desarrolladora de software con sólidos conocimientos en <strong>Java y Spring Boot</strong>. Me apasiona crear soluciones robustas, limpias y bien estructuradas.</p>
-    <p data-i18n="about.p2">He trabajado con arquitecturas por capas y hexagonal, integración de bases de datos relacionales y NoSQL, testing automatizado y entornos de producción monitorizados con herramientas como Dynatrace y OpenShift.</p>
-    <p data-i18n="about.p3">Busco seguir creciendo en equipos donde la calidad del código, las buenas prácticas y el trabajo en equipo sean valores fundamentales.</p>
+    <p data-i18n="about.p1">Soy <strong>Backend Java Developer con más de 8 años de experiencia</strong> en desarrollo de software, principalmente en entornos bancarios y empresariales.</p>
+    <p data-i18n="about.p2">Mi especialización está en el desarrollo de <strong>microservicios y APIs REST con Java y Spring Boot, </strong>trabajando con arquitecturas por capas y arquitectura hexagonal, bases de datos relacionales y procesos de integración y despliegue continuo.</p>
+    <p data-i18n="about.p3">A lo largo de mi experiencia he participado en todo el ciclo de vida del software: <strong>desarrollo, testing, code review, despliegue, monitorización y resolución de incidencias en producción.</strong></p>
+    <p data-i18n="about.p4">Actualmente estoy especialmente interesada en posiciones de <strong>Backend Java / Software Engineer</strong> donde pueda seguir trabajando en sistemas distribuidos, arquitectura backend y mejora continua de aplicaciones en producción.</p>
+
   </div>
 
   <div class="two-col" style="margin-top:1.2rem;">
@@ -65,6 +67,9 @@
       </div>
       <div class="info-item"><span class="icon">💼</span>
         <a href="https://linkedin.com/in/sheilacortesfdez" target="_blank">linkedin.com/in/sheilacortesfdez</a>
+      </div>
+      <div class="info-item"><span class="icon">📧</span>
+        <button class="proj-link proj-link-btn" onclick="openModal('contactForm')" data-i18n="contact.form.open">Email</button>
       </div>
     </div>
   </div>
@@ -127,15 +132,63 @@
 
     <div class="timeline-item reveal">
       <div class="tl-dot"></div>
+
       <div class="date" data-i18n="exp.job1.date">2023 – Actualidad</div>
+
       <h2>Plexus Tech</h2>
       <h3 data-i18n="exp.job1.role">Consultora Backend Java</h3>
-      <div class="company" data-i18n="exp.job1.company">Sector bancario / financiero · España</div>
-      <p data-i18n="exp.job1.desc">Desarrollo y mantenimiento de microservicios en Java con Spring Boot bajo arquitectura hexagonal. Integración con bases de datos Oracle. Implementación de pipelines CI/CD con Jenkins y GitHub Actions. Monitorización con OpenShift y Dynatrace.</p>
+
+      <div class="company" data-i18n="exp.job1.company">
+        Sector bancario / financiero · España
+      </div>
+      <p data-i18n="exp.job1.desc">Desarrollo y mantenimiento de microservicios backend para sistemas financieros, utilizando Java y Spring Boot.</p>
+      <ul class="experience-dots">
+        <li data-i18n="exp.job1.dot1">
+          Desarrollo y mantenimiento de microservicios backend con <strong>Java y Spring Boot</strong>.
+        </li>
+        <li data-i18n="exp.job1.dot2">
+          Diseño y evolución de <strong>APIs REST</strong> siguiendo arquitectura hexagonal,
+          principios SOLID y buenas prácticas de Clean Code.
+        </li>
+        <li data-i18n="exp.job1.dot3">
+          Desarrollo de pruebas unitarias y de integración utilizando <strong>JUnit 5,
+          Mockito y Newman</strong> para garantizar la calidad de los servicios.
+        </li>
+        <li data-i18n="exp.job1.dot4">
+          Integración con bases de datos <strong>Oracle</strong>, trabajando con distintos
+          modelos de persistencia según las necesidades del servicio.
+        </li>
+        <li data-i18n="exp.job1.dot5">
+          Participación en procesos de integración y despliegue continuo mediante
+          <strong>Jenkins y GitHub Actions, con despliegues sobre OpenShift</strong>.
+        </li>
+        <li data-i18n="exp.job1.dot6">
+          Monitorización y análisis del comportamiento de los servicios mediante
+          Dynatrace, <strong>logs y métricas, participando en la resolución de incidencias</strong>.
+        </li>
+        <li data-i18n="exp.job1.dot7">
+          Participación en code reviews y mejora continua de la calidad del código
+          mediante herramientas como <strong>SonarQube y Fortify</strong>.
+        </li>
+      </ul>
+
       <div class="tags">
-        <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">MongoDB</span>
-        <span class="tag">Oracle</span><span class="tag">Jenkins</span><span class="tag">OpenShift</span>
-        <span class="tag">Dynatrace</span><span class="tag">JUnit5</span><span class="tag">Newman</span>
+        <span class="tag">Java</span>
+        <span class="tag">Spring Boot</span>
+        <span class="tag">Microservices</span>
+        <span class="tag">REST</span>
+        <span class="tag">Hexagonal Architecture</span>
+        <span class="tag">MongoDB</span>
+        <span class="tag">Oracle</span>
+        <span class="tag">JUnit 5</span>
+        <span class="tag">Mockito</span>
+        <span class="tag">Newman</span>
+        <span class="tag">Jenkins</span>
+        <span class="tag">GitHub Actions</span>
+        <span class="tag">OpenShift</span>
+        <span class="tag">Dynatrace</span>
+        <span class="tag">SonarQube</span>
+        <span class="tag">Fortify</span>
       </div>
     </div>
     <div class="timeline-item reveal">
@@ -144,7 +197,36 @@
       <h2>Experis España</h2>
       <h3 data-i18n="exp.job2.role">Desarrolladora Full Stack Java</h3>
       <div class="company" data-i18n="exp.job2.company">Sector bancario / financiero · España</div>
-      <p data-i18n="exp.job2.desc">Desarrollo y mantenimiento de microservicios en Java con Spring Boot bajo arquitectura por capas. Integración con bases de datos MySQL y desarrollo de servicios SOAP. Desarrollo front-end con HTML5, CSS3, JavaScript y jQuery. Implementación de pipelines CI/CD con Jenkins. Monitorización con OpenShift.</p>
+      <p data-i18n="exp.job2.desc">Desarrollo y mantenimiento de aplicaciones y servicios backend utilizando Java y tecnologías del ecosistema Spring.</p>
+      <ul class="experience-dots">
+        <li data-i18n="exp.job2.dot1">
+          Desarrollo de servicios backend y <strong>APIs REST con Java y Spring Boot</strong>.
+        </li>
+        <li data-i18n="exp.job2.dot2">
+          Integración con sistemas existentes mediante <strong>APIs REST y servicios SOAP</strong>.
+        </li>
+        <li data-i18n="exp.job2.dot3">
+          Desarrollo y mantenimiento de consultas y estructuras de datos en <strong>MySQL</strong>.
+        </li>
+        <li data-i18n="exp.job2.dot4">
+          Implementación de tests unitarios con <strong>JUnit 5</strong> y pruebas de APIs mediante Newman.
+        </li>
+        <li data-i18n="exp.job2.dot5">
+          Análisis de rendimiento y pruebas de carga utilizando <strong>JMeter</strong>.
+        </li>
+        <li data-i18n="exp.job2.dot6">
+          Resolución de incidencias y análisis de problemas en diferentes entornos.
+        </li>
+        <li data-i18n="exp.job2.dot7">
+        Automatización de procesos mediante <strong>Jenkins</strong>.
+      </li>
+        <li data-i18n="exp.job2.dot8">
+          Aplicación de herramientas de análisis estático y seguridad como <strong>SonarQube</strong>.
+        </li>
+        <li data-i18n="exp.job2.dot9">
+          Participación en mantenimiento evolutivo y desarrollo de nuevas funcionalidades.
+        </li>
+      </ul>
       <div class="tags">
         <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">SOAP</span>
         <span class="tag">MySQL</span><span class="tag">HTML5</span><span class="tag">JavaScript</span>
