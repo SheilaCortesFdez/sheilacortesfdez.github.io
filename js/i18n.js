@@ -156,10 +156,11 @@ const i18n = {
       'hero.cta':      'View my profile',
 
       'about.title':     '👩‍💻 About me',
-      'about.p1':        'I am a <strong>Java Backend Developer with over 8 years of experience</strong> in software development, primarily within banking and enterprise environments.
+      'about.p1':        'I am a <strong>Java Backend Developer with over 8 years of experience</strong> in software development, primarily within banking and enterprise environments.',
       'about.p2':        'I specialize in developing <strong>microservices and REST APIs using Java and Spring Boot</strong>, working with layered and hexagonal architectures, relational databases, and continuous integration and deployment processes.',
       'about.p3':        'Throughout my career, I have been involved in the entire software development lifecycle: <strong>development, testing, code reviews, deployment, monitoring, and production incident resolution</strong>.',
       'about.p4':        'I am currently particularly interested in <strong>Backend Java / Software Engineer</strong> positions where I can continue working on distributed systems, backend architecture, and continuous improvement of production applications.',
+
       'about.location':  'Spain',
       'about.role':      'Backend Software Engineer',
       'about.languages': 'Spanish (native) · English (B1)',
@@ -178,7 +179,8 @@ const i18n = {
       'exp.job1.date':      '2023 – Present',
       'exp.job1.role':      'Java Backend Consultant',
       'exp.job1.company':   'Banking / financial sector · Spain',
-      'exp.job1.desc':      'Development and maintenance of backend microservices for financial systems, using Java and Spring Boot.',    'exp.job2.role':      'Full Stack Java Developer',
+      'exp.job1.desc':      'Development and maintenance of backend microservices for financial systems, using Java and Spring Boot.',
+      'exp.job2.role':      'Full Stack Java Developer',
       'exp.job1.dot1':       'Development and maintenance of backend microservices using <strong>Java and Spring Boot</strong> for financial systems.',
       'exp.job1.dot2':       'Design and evolution of <strong>REST APIs</strong> following hexagonal architecture, SOLID principles, and Clean Code best practices.',
       'exp.job1.dot3':       'Development of unit and integration tests using <strong>JUnit 5, Mockito, and Newman</strong> to ensure service quality.',
