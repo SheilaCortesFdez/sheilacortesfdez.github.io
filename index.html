@@ -238,6 +238,172 @@
   </div>
 </section>
 
+
+<!-- ===== ENGINEERING CASE STUDIES ===== -->
+<section id="case-studies" class="content-section">
+
+  <h2 class="section-title">
+    <span>⚙️</span>
+    <span data-i18n="cases.title">Proyectos Profesionales</span>
+  </h2>
+
+  <div class="case-studies-intro reveal">
+    <p data-i18n="cases.subtitle">
+      Ejemplos de problemas técnicos, decisiones de arquitectura y soluciones backend.
+    </p>
+  </div>
+
+  <div class="case-studies-grid">
+
+    <!-- CASE STUDY 1 -->
+    <article class="card case-card reveal">
+
+      <div class="case-category">
+        Backend · Batch · Architecture
+      </div>
+
+      <h3 data-i18n="cases.case1.title">
+        Desarrollo de un batch Java 17 con arquitectura hexagonal
+      </h3>
+
+      <p data-i18n="cases.case1.desc">
+        Desarrollo desde cero de un proceso batch en Java 17 para procesar
+        información de Ebury, aplicar reglas de negocio, seleccionar cuentas,
+        validar los datos y generar ficheros para sistemas externos.
+      </p>
+
+      <div class="case-challenge" data-i18n="cases-case1-challenge">
+        <strong>Reto técnico:</strong>
+        gestionar Js con un volumen elevado de cuentas sobre un API paginado,
+        incorporando paralelización para reducir el tiempo de recuperación
+        y evitar timeouts del gateway de 30 segundos.
+      </div>
+
+      <div class="case-tags">
+        <span>Java 17</span>
+        <span>Spring Boot</span>
+        <span>Hexagonal</span>
+        <span>Batch</span>
+        <span>REST</span>
+        <span>SFTP</span>
+      </div>
+
+      <button
+              class="proj-link case-link"
+              type="button"
+              data-modal="case-1" data-i18n="cases-case1-button">
+        Ver caso →
+      </button>
+
+    </article>
+
+    <!-- CASE STUDY 2 -->
+    <article class="card case-card reveal">
+
+      <div class="case-category">
+        Backend · APIs · B2B Integration
+      </div>
+
+      <h3 data-i18n="cases.case2.title">
+        API de integración de partners y gestión de leads
+      </h3>
+
+      <p data-i18n="cases.case2.desc">
+        Diseño y desarrollo desde cero de una API para integrar partners
+        con la entidad bancaria y gestionar el ciclo de vida de sus leads,
+        sustituyendo un intercambio anterior basado en ficheros CSV vía SFTP.
+      </p>
+
+      <div class="case-challenge" data-i18n="cases-case2-challenge">
+        <strong>Reto técnico:</strong>
+        proporcionar una integración segura y homogénea para diferentes
+        partners con configuraciones de negocio y requisitos de datos distintos.
+      </div>
+
+      <div class="case-highlights">
+
+        <div class="case-highlight" data-i18n="cases-case2-highlights">
+          <strong>API</strong>
+          <span>3 operaciones principales</span>
+        </div>
+
+        <div class="case-highlight" data-i18n="cases-case2-highlights2">
+          <strong>OAuth 2.0</strong>
+          <span>Client ID + Client Secret</span>
+        </div>
+
+        <div class="case-highlight" data-i18n="cases-case2-highlights3">
+          <strong>Partners</strong>
+          <span>Configuración independiente</span>
+        </div>
+
+      </div>
+
+      <div class="case-tags">
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>REST</span>
+        <span>OAuth 2.0</span>
+        <span>API</span>
+        <span>B2B</span>
+      </div>
+
+      <button
+              class="proj-link case-link"
+              type="button"
+              data-modal="case-2" data-i18n="cases.case2.button">
+        Ver caso →
+      </button>
+
+    </article>
+
+
+    <!-- CASE STUDY 3 -->
+    <article class="card case-card reveal">
+
+      <div class="case-category">
+        Backend · Microservices · KYC
+      </div>
+
+      <h3 data-i18n="cases.case3.title">
+        Automatización del KYC Reliance para Ebury
+      </h3>
+
+      <p data-i18n="cases.case3.desc">
+        Desarrollo desde cero en Java 17 de la automatización necesaria para
+        devolver a Ebury la información de KYC cuando sus leads avanzan al
+        step EBS005 de inicio de onboarding y solicitud de KYC.
+      </p>
+
+      <div class="case-challenge" data-i18n="cases-case3-challenge">
+        <strong >Reto técnico:</strong>
+        coordinar diferentes microservicios y APIs, controlar fallos y tiempos
+        de respuesta mediante Circuit Breaker y paralelizar las llamadas para
+        reducir el tiempo total del proceso.
+      </div>
+
+      <div class="case-tags">
+        <span>Java 17</span>
+        <span>Spring Boot</span>
+        <span>Microservices</span>
+        <span>KYC</span>
+        <span>Circuit Breaker</span>
+        <span>REST</span>
+      </div>
+
+      <button
+              class="proj-link case-link"
+              type="button"
+              data-modal="case-3" data-i18n="cases.case3.button">
+        Ver caso →
+      </button>
+
+    </article>
+
+  </div>
+
+</section>
+
 <!-- ===== FORMACIÓN ===== -->
 <section id="education" class="content-section">
   <h2 class="section-title" data-i18n="edu.title">🎓 Formación</h2>
@@ -338,7 +504,7 @@
   <div class="card reveal contact-mini-card" style="margin-top:1.2rem;">
     <h3 data-i18n="contact.form.title">¿Prefieres un correo?</h3>
     <p data-i18n="contact.form.teaser">Si prefieres, puedes abrir un formulario rápido y enviarme un email.</p>
-      </br>
+      <br>
     <button class="proj-link proj-link-btn" onclick="openModal('contactForm')" data-i18n="contact.form.open">Abrir formulario</button>
   </div>
 </section>
@@ -429,6 +595,426 @@
     </ul>
   </div>
 </div>
+<!-- =====================================================
+     CASE STUDY MODAL 1
+===================================================== -->
+<div class="modal-overlay" id="modal-case-1">
+
+  <div class="modal-box" onclick="event.stopPropagation()">
+
+    <button
+            class="modal-close"
+            type="button"
+            onclick="closeModal('case-1')">
+      ×
+    </button>
+
+    <div class="case-category">
+      Backend · Batch · Architecture
+    </div>
+
+    <h3 data-i18n="cases.case1.modal.title">
+      Desarrollo de un batch Java 17 con arquitectura hexagonal
+    </h3>
+
+    <p class="modal-lead" data-i18n="cases.case1.modal.resume">
+      Desarrollo desde cero de un proceso batch en Java 17 utilizando
+      arquitectura hexagonal para procesar información de Ebury,
+      aplicar reglas de negocio, consultar cuentas, validar los datos
+      y generar los ficheros requeridos por el sistema consumidor.
+    </p>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case1.modal.subtitle">Contexto</h4>
+
+      <p data-i18n="cases.case1.modal.subtitle-desc">
+        El proceso trabaja con información recibida de Ebury y debe
+        generar una única fila por cada J en el fichero de salida.
+        Una misma entidad puede estar representada por una J master
+        y varias Js relacionadas como primos.
+      </p>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case1.modal.subtitle2">Agrupación de Js</h4>
+
+      <p data-i18n="cases.case1.modal.subtitle2-desc">
+        Cuando una J tiene registros relacionados, los atributos
+        <strong>EBATT0061</strong> y <strong>EBATT0062</strong>
+        identifican la J master a la que pertenece cada primo.
+      </p>
+
+      <p data-i18n="cases.case1.modal.subtitle2-desc2">
+        El proceso agrupa las Js relacionadas bajo su J master y
+        realiza el sumatorio de <strong>EBATT0063
+        (Total EUR Net Profit)</strong> de todos los registros
+        que forman parte de la misma agrupación.
+      </p>
+
+      <p data-i18n="cases.case1.modal.subtitle2-desc3">
+        El resultado se representa en una única fila correspondiente
+        a la J master.
+      </p>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case1.modal.subtitle3">Control del dato recibido</h4>
+
+      <p data-i18n="cases.case1.modal.subtitle3-desc">
+        Para <strong>EBATT0063</strong> se utiliza el registro
+        correspondiente al <strong>fact_last_update</strong> más
+        reciente dentro del mes de ejecución, contemplando que
+        pueda existir más de un registro recibido durante ese periodo.
+      </p>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case1.modal.subtitle4">Selección de cuenta</h4>
+
+      <p data-i18n="cases.case1.modal.subtitle4-desc">
+        Para obtener el <strong>idContract</strong>, el proceso consulta
+        el API de cuentas pasivas buscando cuentas activas en euros
+        correspondientes a los productos:
+      </p>
+
+      <ul>
+        <li data-i18n="cases.case1.modal.subtitle4-account-300"><strong>300</strong> — Cuenta Corriente</li>
+        <li><strong data-i18n="cases.case1.modal.subtitle4-account-301">301</strong> — Cuenta de Ahorro</li>
+      </ul>
+
+      <p data-i18n="cases.case1.modal.subtitle4-desc2">
+        De las cuentas obtenidas se selecciona aquella que presenta el <strong>mayor saldo</strong>.
+      </p>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case1.modal.subtitle5">Reto de rendimiento</h4>
+
+      <p data-i18n="cases.case1.modal.subtitle5-desc">
+        Una J podía tener un volumen elevado de cuentas y el API
+        utilizado trabaja mediante paginación. Las consultas podían
+        provocar que el gateway superase su límite de
+        <strong>30 segundos</strong>.
+      </p>
+
+      <p data-i18n="cases.case1.modal.subtitle5-desc2">
+        Para resolver este problema se incorporó
+        <strong>paralelización</strong> en la recuperación de las
+        diferentes páginas, reduciendo el tiempo necesario para
+        obtener la información y evitando los timeouts del gateway.
+      </p>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case1.modal.subtitle6">Validación de integridad</h4>
+
+      <p data-i18n="cases.case1.modal.subtitle6-desc">
+        El total calculado a partir de los valores de
+        <strong>EBATT0063</strong> se compara con el valor de
+        <strong>BSFCT017 — Total EUR Net Profit</strong>.
+      </p>
+
+      <p data-i18n="cases.case1.modal.subtitle6-desc2">
+        El proceso únicamente continúa cuando la diferencia se
+        encuentra dentro de un margen de tolerancia de
+        <strong>±1%</strong>.
+      </p>
+
+      <p data-i18n="cases.case1.modal.subtitle6-desc3">
+        Si existe una discrepancia superior al margen permitido,
+        se genera una notificación por email para solicitar la
+        corrección y el proceso no continúa.
+      </p>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case1.modal.subtitle7">Generación de ficheros</h4>
+
+      <p data-i18n="cases.case1.modal.subtitle7-desc">
+        Una vez superadas las validaciones, el proceso genera
+        <strong>dos ficheros CSV</strong> con los requisitos de
+        formato definidos por el sistema consumidor.
+      </p>
+
+      <p data-i18n="cases.case1.modal.subtitle7-desc2">
+        Los ficheros se generan utilizando
+        <strong>CP1145</strong> y representación hexadecimal,
+        debido a los requisitos de integración del sistema destino.
+      </p>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case1.modal.subtitle8">Distribución</h4>
+
+      <p data-i18n="cases.case1.modal.subtitle8-desc">
+        Si el proceso finaliza correctamente, los ficheros se envían
+        por email a los destinatarios correspondientes y se depositan
+        en un <strong>SFTP</strong>.
+      </p>
+
+      <p data-i18n="cases.case1.modal.subtitle8-desc2">
+        Posteriormente, <strong>Control-M</strong> realiza el envío
+        hacia el servidor del sistema consumidor.
+      </p>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case1.modal.subtitle9">Arquitectura</h4>
+
+      <p data-i18n="cases.case1.modal.subtitle9-desc">
+        El desarrollo se realiza con <strong>Java 17</strong> y
+        <strong>arquitectura hexagonal</strong>, separando la lógica
+        del proceso de las integraciones externas.
+      </p>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case1.modal.subtitle10">Stack técnico</h4>
+
+      <div class="case-tags">
+        <span>Java 17</span>
+        <span>Spring Boot</span>
+        <span>Hexagonal Architecture</span>
+        <span>Batch</span>
+        <span>REST</span>
+        <span>Parallel Processing</span>
+        <span>CSV</span>
+        <span>CP1145</span>
+        <span>Hexadecimal</span>
+        <span>SFTP</span>
+        <span>Control-M</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- =====================================================
+     CASE STUDY MODAL 2
+===================================================== -->
+<div class="modal-overlay" id="modal-case-2">
+
+  <div class="modal-box" onclick="event.stopPropagation()">
+
+    <button
+            class="modal-close"
+            type="button"
+            onclick="closeModal('case-2')">
+      ×
+    </button>
+
+    <div class="case-category">
+      Backend · APIs · B2B Integration
+    </div>
+
+    <h3 data-i18n="cases.case2.modal.title">
+      API de integración de partners y gestión de leads
+    </h3>
+
+    <p class="modal-lead" data-i18n="cases.case2.modal.resume">
+      Diseño y desarrollo desde cero de una API destinada a integrar
+      diferentes partners con una entidad bancaria, permitiendo
+      gestionar sus leads mediante una interfaz común y segura.
+    </p>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case2.modal.subtitle">Contexto</h4>
+
+      <p data-i18n="cases.case2.modal.subtitle-desc">
+        La entidad bancaria trabaja con diferentes partners con los
+        que mantiene acuerdos comerciales. Cada partner dispone de
+        un identificador único y de una configuración propia de
+        productos, atributos y steps asociados a sus leads.
+      </p>
+
+      <p data-i18n="cases.case2.modal.subtitle-desc2">
+        El proyecto nació para sustituir el modelo anterior de
+        integración basado en el intercambio de ficheros CSV
+        mediante SFTP por una integración basada en API.
+      </p>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case2.modal.subtitle2">Integración mediante API</h4>
+
+      <p data-i18n="cases.case2.modal.subtitle2-desc">
+        La API proporciona tres operaciones principales para gestionar
+        el ciclo de vida del lead:
+      </p>
+
+      <ul>
+        <li data-i18n="cases.case2.modal.subtitle2-li"><strong>Alta de lead</strong></li>
+        <li data-i18n="cases.case2.modal.subtitle2-li2"><strong>Actualización de atributos</strong></li>
+        <li data-i18n="cases.case2.modal.subtitle2-li3"><strong>Actualización de steps</strong></li>
+      </ul>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case2.modal.subtitle3">Autenticación</h4>
+
+      <p data-i18n="cases.case2.modal.subtitle3-desc">
+        Cada partner dispone de unas credenciales propias mediante
+        <strong>Client ID</strong> y <strong>Client Secret</strong>,
+        utilizadas para obtener el token de acceso mediante
+        <strong>OAuth 2.0</strong>.
+      </p>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case2.modal.subtitle4">Configuración por partner</h4>
+
+      <p data-i18n="cases.case2.modal.subtitle4-desc">
+        La integración debe contemplar las particularidades de cada
+        partner, incluyendo los productos, atributos y steps definidos
+        en el acuerdo correspondiente.
+      </p>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case2.modal.subtitle5">Ciclo de vida del lead</h4>
+
+      <p data-i18n="cases.case2.modal.subtitle5-desc">
+        Los leads recibidos a través de la API deben avanzar por los
+        diferentes steps definidos hasta alcanzar el estado
+        <strong>ganado</strong>, momento necesario para que puedan
+        entrar en el proceso de facturación.
+      </p>
+
+    </div>
+
+    <div class="case-detail">
+
+      <h4 data-i18n="cases.case2.modal.subtitle6">Stack técnico</h4>
+
+      <div class="case-tags">
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>REST</span>
+        <span>OAuth 2.0</span>
+        <span>API</span>
+        <span>B2B</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- =====================================================
+     CASE STUDY MODAL 3
+===================================================== -->
+
+<div class="modal-overlay" id="modal-case-3">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('case-3')">
+      ×
+    </button>
+
+    <div class="modal-content">
+      <div class="case-category">
+        Backend · Microservices · KYC
+      </div>
+
+      <h3 data-i18n="cases.case3.modal.title">Automatización de un proceso KYC</h3>
+
+      <h4 data-i18n="cases.case3.modal.subtitle">Contexto</h4>
+      <p data-i18n="cases.case3.modal.subtitle-desc">
+        Desarrollo desde cero en Java 17 de los microservicios necesarios
+        para automatizar un proceso KYC dentro del flujo de onboarding.
+        Cuando un lead alcanza el punto correspondiente del proceso,
+        se ejecuta la lógica necesaria para obtener la información
+        requerida y devolverla al partner.
+      </p>
+
+      <h4 data data-i18n="cases.case3.modal.subtitle2">Integración entre servicios</h4>
+      <p data-i18n="cases.case3.modal.subtitle2-desc">
+        El proceso coordina diferentes microservicios y APIs para obtener
+        la información asociada al lead y construir la respuesta necesaria.
+        Se implementaron las llamadas entre servicios teniendo en cuenta
+        tanto los tiempos de respuesta como los posibles errores durante
+        la comunicación.
+      </p>
+
+      <h4 data-i18n="cases.case3.modal.subtitle3">Resiliencia</h4>
+      <p data-i18n="cases.case3.modal.subtitle3-desc">
+        Se incorporó Circuit Breaker junto con mecanismos de fallback para
+        evitar que un servicio lento o no disponible afectase al resto
+        de la aplicación.
+      </p>
+
+      <p data-i18n="cases.case3.modal.subtitle3-desc2">
+        Además, cuando uno de los servicios devuelve un valor nulo,
+        el flujo continúa sin lanzar una excepción y se mantiene el valor
+        correspondiente en la respuesta.
+      </p>
+
+      <h4 data-i18n="cases.case3.modal.subtitle4">Paralelización</h4>
+      <p data-i18n="cases.case3.modal.subtitle4-desc">
+        Para reducir el tiempo total de respuesta se eliminaron determinadas
+        paginaciones y se paralelizaron las llamadas a los diferentes
+        servicios implicados en el proceso.
+      </p>
+
+      <h4 data-i18n="cases.case3.modal.subtitle5">Validaciones</h4>
+      <p data-i18n="cases.case3.modal.subtitle5-desc">
+        Se implementaron validaciones sobre la información obtenida para
+        comprobar que los datos corresponden al lead procesado y determinar
+        si debe ejecutarse el flujo KYC.
+      </p>
+
+      <h4 data-i18n="cases.case3.modal.subtitle6">Resultado</h4>
+      <p data-i18n="cases.case3.modal.subtitle6-desc">
+        El proceso permite automatizar la obtención y devolución de la
+        información KYC dentro del flujo de onboarding, integrando varios
+        microservicios de forma resiliente y optimizando el tiempo de
+        ejecución mediante paralelización.
+      </p>
+
+      <h4 data-i18n="cases.case3.modal.subtitle7">Entrega y operación</h4>
+      <p data-i18n="cases.case3.modal.subtitle7-desc">
+        Además del desarrollo, realizo las subidas a los diferentes entornos
+        y gestiono los Pull Requests, incluyendo la revisión de los cambios
+        realizados por otros compañeros.
+      </p>
+
+      <p data-i18n="cases.case3.modal.subtitle7-desc2">
+        Los pods están desplegados en OpenShift. Para analizar la ejecución
+        de los servicios y resolver incidencias revisamos los logs de los pods
+        y utilizamos Dynatrace.
+      </p>
+    </div>
+  </div>
+</div>
+
 
 <div class="modal-overlay" id="modal-contactForm" onclick="closeModal('contactForm')">
   <div class="modal-box" onclick="event.stopPropagation()">
@@ -450,13 +1036,14 @@
       <button type="submit" class="proj-link" data-i18n="contact.form.submit">Enviar email</button>
       <p id="contact-form-status" class="contact-form-status" aria-live="polite"></p>
     </form>
-    </div>
+  </div>
 </div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/certification.js"></script>
+<script src="js/engineering.js"></script>
 <script src="js/main.js"></script>
 
 </body>

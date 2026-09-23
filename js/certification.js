@@ -272,7 +272,6 @@ function updateCertDots() {
 
 }
 
-
 document.addEventListener(
   "DOMContentLoaded",
   () => {
