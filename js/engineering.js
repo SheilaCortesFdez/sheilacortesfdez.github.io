@@ -15,15 +15,13 @@
 
     const caseButtons = section.querySelectorAll('.case-link');
 
-    console.log('✅ Case Study buttons:', caseButtons.length);
+
 
     caseButtons.forEach((button) => {
 
       button.addEventListener('click', function () {
 
         const modalId = this.dataset.modal;
-
-        console.log('🔵 Abriendo modal:', modalId);
 
         if (!modalId) {
           console.error('❌ El botón no tiene data-modal');
