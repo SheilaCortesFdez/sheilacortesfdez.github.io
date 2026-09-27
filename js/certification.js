@@ -1,29 +1,33 @@
 const certifications = [
   {
     name: "cert.name0",
-    url: "sources/Docker&Kubernetes.pdf"
+    url: "sources/microserviciosSpringCloud_Kafka.pdf"
   },
   {
     name: "cert.name1",
-    url: "sources/Certificado_SheilaCortesFdez.pdf"
+    url: "sources/Docker&Kubernetes.pdf"
   },
   {
     name: "cert.name2",
-    url: "https://www.udemy.com/certificate/UC-2cf46462-50d6-4ddd-888f-4684662dd9dc/"
+    url: "sources/Certificado_SheilaCortesFdez.pdf"
   },
   {
     name: "cert.name3",
+    url: "https://www.udemy.com/certificate/UC-2cf46462-50d6-4ddd-888f-4684662dd9dc/"
+  },
+  {
+    name: "cert.name4",
     url: "https://www.udemy.com/certificate/UC-Q4NYAE18/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email"
   },
    {
-      name: "cert.name4",
+      name: "cert.name5",
       url: "sources/SpringBootCeroNinja.pdf"
    },
 ];
 
 
 let certCurrentIndex = 0;
-let certCardsPerView = 4;
+let certCardsPerView = 5;
 
 
 function getCertCardsPerView() {
