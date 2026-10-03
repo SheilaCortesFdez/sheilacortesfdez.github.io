@@ -137,6 +137,94 @@ body.hero-hover #three-canvas {
   color: #fff;
   box-shadow: 0 0 16px var(--accent-glow);
 }
+/* ========================================
+   MENÚ HAMBURGUESA
+   Oculto en portátil/escritorio
+======================================== */
+.menu-toggle {
+  display: none;
+}
+@media (max-width: 900px) {
+
+  #main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 0 20px;
+
+    /* Fondo sólido para que no se vea el contenido de detrás */
+    background: #0b0b12;
+
+    /* Opcional: una pequeña sombra */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 12px;
+
+    cursor: pointer;
+    z-index: 10001;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    right: 15px;
+
+    display: none;
+    flex-direction: column;
+
+    padding: 15px;
+    border-radius: 15px;
+
+    z-index: 10000;
+
+    /* También sólido */
+    background: #0b0b12;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu .nav-link {
+    width: 100%;
+    padding: 14px 10px;
+  }
+
+  body {
+    padding-top: 70px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section {
+    scroll-margin-top: 85px;
+  }
+
+}
 
 /* ========================================
    HERO
@@ -324,8 +412,8 @@ body.hero-hover #three-canvas {
   color: var(--accent);
   text-decoration: none;
   transition: opacity 0.2s;
-  cursor: pointer,
-  position: relative,
+  cursor: pointer;
+  position: relative;
   z-index: 2;
 }
 .info-item a:hover { opacity: 0.75; text-decoration: underline; }

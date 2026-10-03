@@ -282,6 +282,72 @@
   });
 })();
 
+// ========================================
+// MENÚ HAMBURGUESA - MÓVIL / TABLET
+// ========================================
+
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+if (menuToggle && navMenu) {
+
+  // Abrir / cerrar menú
+  menuToggle.addEventListener('click', () => {
+
+    const isOpen = navMenu.classList.toggle('open');
+
+    menuToggle.setAttribute('aria-expanded', isOpen);
+
+    const icon = menuToggle.querySelector('i');
+
+    if (isOpen) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-xmark');
+    } else {
+      icon.classList.remove('fa-xmark');
+      icon.classList.add('fa-bars');
+    }
+  });
+
+
+  // Cerrar menú al seleccionar una sección
+  navMenu.querySelectorAll('.nav-link').forEach(link => {
+
+    link.addEventListener('click', () => {
+
+      navMenu.classList.remove('open');
+
+      menuToggle.setAttribute('aria-expanded', 'false');
+
+      const icon = menuToggle.querySelector('i');
+
+      icon.classList.remove('fa-xmark');
+      icon.classList.add('fa-bars');
+    });
+
+  });
+
+
+  // Cerrar menú al pulsar fuera de él
+  document.addEventListener('click', (event) => {
+
+    const clickedInsideMenu = navMenu.contains(event.target);
+    const clickedToggle = menuToggle.contains(event.target);
+
+    if (!clickedInsideMenu && !clickedToggle) {
+
+      navMenu.classList.remove('open');
+
+      menuToggle.setAttribute('aria-expanded', 'false');
+
+      const icon = menuToggle.querySelector('i');
+
+      icon.classList.remove('fa-xmark');
+      icon.classList.add('fa-bars');
+    }
+  });
+}
+
 
 /* ================================================================
    2. NAVEGACIÓN ACTIVA (IntersectionObserver)

@@ -19,18 +19,27 @@
 
 <!-- ===== NAVEGACIÓN ===== -->
 <nav id="main-nav">
-  <a href="#hero"       class="nav-link active" data-i18n="nav.home">Inicio</a>
-  <a href="#about"      class="nav-link" data-i18n="nav.about">Sobre mí</a>
-  <a href="#skills"     class="nav-link" data-i18n="nav.skills">Habilidades</a>
-  <a href="#experience" class="nav-link" data-i18n="nav.experience">Experiencia</a>
-  <a href="#education"  class="nav-link" data-i18n="nav.education">Formación</a>
-  <a href="#certification"  class="nav-link" data-i18n="nav.certifications">Certificaciones</a>
-  <a href="#projects"   class="nav-link" data-i18n="nav.projects">Proyectos</a>
-  <a href="#contact"    class="nav-link" data-i18n="nav.contact">Contacto</a>
-  <!-- Selector de idioma -->
-  <button id="lang-toggle" class="lang-btn" aria-label="Switch language">
-    <span id="lang-label">EN</span>
+
+  <!-- Botón hamburguesa -->
+  <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+    <i class="fa-solid fa-bars"></i>
   </button>
+
+  <!-- Menú -->
+  <div id="nav-menu" class="nav-menu">
+    <a href="#hero"       class="nav-link active" data-i18n="nav.home">Inicio</a>
+    <a href="#about"      class="nav-link" data-i18n="nav.about">Sobre mí</a>
+    <a href="#skills"     class="nav-link" data-i18n="nav.skills">Habilidades</a>
+    <a href="#experience" class="nav-link" data-i18n="nav.experience">Experiencia</a>
+    <a href="#education"  class="nav-link" data-i18n="nav.education">Formación</a>
+    <a href="#certification"  class="nav-link" data-i18n="nav.certifications">Certificaciones</a>
+    <a href="#projects"   class="nav-link" data-i18n="nav.projects">Proyectos</a>
+    <a href="#contact"    class="nav-link" data-i18n="nav.contact">Contacto</a>
+    <!-- Selector de idioma -->
+    <button id="lang-toggle" class="lang-btn" aria-label="Switch language">
+      <span id="lang-label">EN</span>
+    </button>
+  </div>
 </nav>
 
 <!-- ===== HERO ===== -->
@@ -955,7 +964,7 @@
         requerida y devolverla al partner.
       </p>
 
-      <h4 data data-i18n="cases.case3.modal.subtitle2">Integración entre servicios</h4>
+      <h4 data-i18n="cases.case3.modal.subtitle2">Integración entre servicios</h4>
       <p data-i18n="cases.case3.modal.subtitle2-desc">
         El proceso coordina diferentes microservicios y APIs para obtener
         la información asociada al lead y construir la respuesta necesaria.
